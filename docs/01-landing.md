@@ -96,7 +96,7 @@ Rules:
   - React 19, TypeScript, Tailwind CSS v4, shadcn components built on Base UI (`@base-ui/react`), `lucide-react` icons, `next-themes`.
   - The shadcn theme is aligned with [03-design.md](03-design.md) (plum and sage palette, Inter, 12px, light only, animations).
   - `cn` comes from the `cn` package (shadcn's replacement for clsx + tailwind-merge), via `lib/utils.ts`.
-  - Runtime: **Node 26.13.0 LTS** (`.nvmrc`, `engines`). Package manager: **pnpm 12**. Scripts: `dev`, `build`, `lint`, `typecheck`, `format`.
+  - Runtime: **Node 26.13.0 LTS** locally (`.nvmrc`); `engines` is `>=24`, so **Vercel builds with Node 24** (it has no Node 26; `>=26.13.0` failed there). Package manager: **pnpm 12**. Scripts: `dev`, `build`, `lint`, `typecheck`, `format`.
   - **Next.js 16 has breaking changes:** read `next-app/AGENTS.md` and the guides in `next-app/node_modules/next/dist/docs/` before writing code.
 - The sections are static; only the form submissions run on the server.
 - The language switch, the shop details (read from `config/shop.ts`) and the animations live in the React components.

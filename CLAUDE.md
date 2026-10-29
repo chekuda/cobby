@@ -80,7 +80,7 @@ pnpm build
 
 ## Environment and known issues
 
-- **Node 26.13.0 LTS (arm64)**, pinned in `.nvmrc` (root and `next-app/`) and in `package.json` `engines`; it's the user's nvm default. The old Node 20 is the Intel build (under Rosetta).
+- **Node 26.13.0 LTS (arm64)** locally, pinned in `.nvmrc` (root and `next-app/`); it's the user's nvm default. `package.json` `engines` is **`>=24`** because **Vercel doesn't offer Node 26** (`>=26.13.0` failed there with "invalid or discontinued Node.js Version"); Vercel builds with Node 24. Don't raise `engines` above what Vercel supports. The old Node 20 is the Intel build (under Rosetta).
 - **pnpm 12**, installed globally on Node 26. The old standalone pnpm 10 (Intel) was removed; its `PNPM_HOME` block in `~/.zshrc` is commented out (backup: `~/.zshrc.backup-2026-10-29`).
 - **pnpm 12 refuses packages published less than a day ago** (`minimumReleaseAge`). If an install fails because of it, rebuild the lockfile (`pnpm clean --lockfile`, then `pnpm install`); don't turn the rule off. `pnpm-workspace.yaml` has one exception that pnpm added itself (`lucide-react@1.64.0`); it can be removed once that version is older.
 - **Next.js 16 has breaking changes:** read `next-app/AGENTS.md` and `next-app/node_modules/next/dist/docs/` before writing Next.js code (`proxy.ts` instead of middleware, `params` is a Promise, `PageProps` / `LayoutProps` helpers).
