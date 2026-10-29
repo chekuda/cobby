@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Secrets: never commit env files (FORMS_WEBHOOK_URL lives in next-app/.env.local or on Vercel)
+.env*
+
+# Dependencies and build output (next-app/.gitignore has the Next.js details)
+node_modules/
+.next/
+.vercel/
+
+# Claude Code: per-person settings
+.claude/settings.local.json

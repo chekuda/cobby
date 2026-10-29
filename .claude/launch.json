@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cobby-landing",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--dir", "next-app", "dev"],
+      "port": 3000
+    }
+  ]
+}
