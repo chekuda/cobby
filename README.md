@@ -24,9 +24,10 @@ Cobby helps coffee lovers **keep track of the coffees they buy, brew them better
 
 - [ ] Fill in `next-app/config/legal.ts` (name or company, tax ID, address, email). The legal pages show "[pendiente de completar]" until then
 - [ ] Fill in `contactEmail` (and optionally `logo`) in `next-app/config/shop.ts`
-- [ ] Set up the Google Sheet for the forms: [docs/06-forms-setup.md](docs/06-forms-setup.md)
+- [x] Set up the Google Sheet for the forms ([docs/06-forms-setup.md](docs/06-forms-setup.md)); tested locally
 - [ ] Have the legal texts checked (they're a starting point, not legal advice)
-- [ ] Publish on Vercel and add `FORMS_WEBHOOK_URL` there
+- [ ] Push to GitHub (`chekuda/cobby`, private)
+- [ ] Publish on Vercel Hobby (free, for the demo) and add `FORMS_WEBHOOK_URL` there. Hobby is non-commercial: move to Netlify free or a paid plan once Cobby is pitched to shops for real
 - [ ] Later: buy a domain (the free `.vercel.app` address comes first)
 
 ## The idea in one minute
@@ -53,7 +54,7 @@ All decisions came out of four "grill-me" rounds (32 questions): [docs/04-grilli
 - **Honest:** "Early access" tag, works in the phone's browser (no App Store), no prices for shops, **no fake proof** (no invented testimonials, logos or numbers).
 - **Forms → Google Sheet** through a Google Apps Script. Its address is a secret (`FORMS_WEBHOOK_URL`), never in the code.
 - **Privacy:** consent checkbox on both forms, privacy and legal pages, cookie-free analytics, so no cookie banner.
-- **Hosting:** Vercel, on the free `.vercel.app` address first.
+- **Hosting:** Vercel Hobby (free) for the demo, on the `.vercel.app` address; move to Netlify free or a paid plan when it becomes commercial.
 - **Design:** specialtyCoffeeMarket's palette (plum `#2E2836`, sage `#CACE91`, warm creams), its blob background and "coffee" lettering, Inter type, 12px cards, CSS animations. Details in [docs/03-design.md](docs/03-design.md).
 - **Phase 2 AI:** the bag photo will be read by **Ollama** running on the owner's computer, with a vision model ([docs/02-app.md](docs/02-app.md)).
 

@@ -102,7 +102,7 @@ Rules:
 - The language switch, the shop details (read from `config/shop.ts`) and the animations live in the React components.
 - **Mobile first:** it must look good on a phone, since that's where the app will be used.
 - **The forms** (early access and coffee shops) send their data to a Google Sheet through Google Apps Script (`FORMS_WEBHOOK_URL`, a Vercel secret). Because of this, the forms need a small server part (a Next.js server action or route), so the page is not 100% static.
-- **Hosting: Vercel**, on the free `.vercel.app` address for now. **Analytics: Vercel Web Analytics** (no cookies).
+- **Hosting: Vercel Hobby (free)** for the demo, on the `.vercel.app` address (grill round 5: user's decision). Hobby is for non-commercial use, so move to Netlify's free plan or a paid Vercel plan once Cobby is actively pitched to shops or earns money. **Analytics: Vercel Web Analytics** (no cookies).
 
 ## Build order (grill round 4)
 
@@ -114,7 +114,7 @@ One step at a time; the user reviews each before the next.
 4. ✅ The ratio calculator (recipes in [05-copy.md](05-copy.md))
 5. ✅ Forms + Google Sheet (code done; the Sheet itself is set up by the user with [06-forms-setup.md](06-forms-setup.md)): Claude writes the Apps Script and a step-by-step guide in `docs/06-forms-setup.md` (new); the user creates the Sheet, pastes the script and sets `FORMS_WEBHOOK_URL` in Vercel
 6. ✅ Legal pages (texts done; the details in `config/legal.ts` are filled in by the user)
-7. ⏳ Publish on Vercel: needs the user's Vercel account
+7. ⏳ Publish on Vercel Hobby (demo): import the GitHub repo `chekuda/cobby` with Root Directory `next-app` and set `FORMS_WEBHOOK_URL`. Needs the user's GitHub push and Vercel account
 
 Steps 3–6 were built together on 2026-10-29, at the user's request.
 

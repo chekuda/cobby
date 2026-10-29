@@ -15,12 +15,14 @@
 - Fill in `contactEmail` (and optionally `logo`) in `next-app/config/shop.ts`.
 - Create the Google Sheet + Apps Script and set `FORMS_WEBHOOK_URL` ([`docs/06-forms-setup.md`](docs/06-forms-setup.md)). Until then the forms answer "Couldn't send it".
 - Have the legal texts checked (they're a starting point, not legal advice).
-- Publish on Vercel (step 7): needs the user's Vercel account. A `vercel` CLI attempt was started but not finished; nothing is linked yet (no `.vercel/`).
+- Push to GitHub (`origin` = `git@github.com:chekuda/cobby.git` is set; the repo must be created on github.com first), then publish on **Vercel Hobby** (step 7): import the repo with Root Directory `next-app` and set `FORMS_WEBHOOK_URL`. Nothing is linked to Vercel yet (no `.vercel/`).
+- **Hosting is Vercel Hobby only for the demo** (grill round 5). Hobby is non-commercial; when Cobby is actively pitched to shops or earns money, move to Netlify free (needs: remove `@vercel/analytics`, update the privacy texts, `netlify.toml`, `packageManager` field) or a paid Vercel plan.
 
 ## How we work
 
 - **Workshop mode.** The project is built together with the user, step by step. **Don't build, scaffold or write code until the user asks for it.** When they are explaining, listen, summarize and ask.
-- **Big decisions go through `/grill-me` first** (rounds of numbered questions with a recommended answer; record each decision in [`docs/04-grilling.md`](docs/04-grilling.md) and move it into the right spec).
+- **Ask open questions (user's preference, 2026-10-29).** For any decision, present the options and their trade-offs **without a prefilled or recommended answer**, and no "yes to all" buttons. Give your opinion only when the user asks for it. This also applies to `/grill-me` rounds, even though the skill itself words questions around a recommendation.
+- **Big decisions go through `/grill-me` first** (rounds of numbered open questions; record each decision in [`docs/04-grilling.md`](docs/04-grilling.md) and move it into the right spec).
 - **Read `docs/` before changing anything**, at least the spec for the phase and [`docs/03-design.md`](docs/03-design.md).
 - **Update the docs with every change.** If code changes behavior or a decision is made, update `README.md`, this file when it's relevant, and the affected `docs/` file in the same change. Tick the "Still to define" checklists.
 - **Check before saying it's done:** `pnpm typecheck`, `pnpm lint`, `pnpm build` (inside `next-app/`), and look at it in the browser at desktop and phone width (375px, no horizontal scroll).
@@ -93,7 +95,8 @@ pnpm build
 - Ignored: `node_modules/`, `.next/`, `.env*`, `.vercel/`, `.DS_Store`, `next-env.d.ts`, build output (root `.gitignore` + `next-app/.gitignore`).
 - **Commit only when the user asks.** Short imperative messages in English. End every commit message with the attribution line the session asks for (currently `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`).
 - Before committing: typecheck, lint and build pass; no secrets or personal data in the diff (`config/legal.ts` stays empty in git unless the user fills it in themselves).
-- There is no remote yet. Pushing (GitHub) and connecting Vercel are the user's call.
+- Remote: `origin` → `git@github.com:chekuda/cobby.git` (private; created by the user). Pushing and connecting Vercel are the user's call.
+- `FORMS_WEBHOOK_URL` is set locally in `next-app/.env.local` (git-ignored); the forms were tested end to end on 2026-10-29.
 
 ## Phase 2 notes (for later)
 

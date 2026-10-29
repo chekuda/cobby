@@ -58,6 +58,19 @@ Facts looked up (read-only) in `wix-scm` and on the live site: the shop's websit
 
 > **Update 2026-10-29:** Q8 and Q24 talk about "Ember". The palette was later changed to specialtyCoffeeMarket's at the user's request: the logo dot is now sage, and the rule "the shop config doesn't change colors" still holds with the new palette. See [03-design.md](03-design.md).
 
+## Round 5: free hosting for the demo (2026-10-29), answered by the user
+
+Context: Vercel's free Hobby plan is for non-commercial personal use only ([Vercel fair use guidelines](https://vercel.com/docs/limits/fair-use-guidelines)); a page that pitches to coffee shops is a grey area. Netlify's free plan was proposed as the alternative.
+
+| # | Question | Recommended answer | Decision |
+|---|---|---|---|
+| Q33 | **Host for the demo.** Netlify free instead of Vercel? | Netlify free | ❌ **User's decision: Vercel Hobby for now.** It's a demo that few people will see; move to Netlify (or a paid Vercel plan) once Cobby is actively pitched to shops or earns money |
+| Q34 | **Analytics.** Remove Vercel Analytics? | Remove | Not needed: staying on Vercel keeps Vercel Web Analytics |
+| Q35 | **Build settings.** Add `netlify.toml` + `packageManager`? | Yes | Not needed for now (only when moving to Netlify) |
+| Q36 | **Publishing.** Deploy from the GitHub repo? | Yes | Still applies, on Vercel: import `chekuda/cobby` with Root Directory `next-app` |
+
+> **From round 6 on, questions are open** (user's preference, 2026-10-29): options and trade-offs, no recommended answer, no "yes to all". Rounds 1–4 used recommended answers, and the user accepted them all.
+
 ## Status
 
 **Landing page (phase 1): description done**, 32 decisions over 4 rounds. Waiting for the user to confirm the shared understanding before building step 1.
