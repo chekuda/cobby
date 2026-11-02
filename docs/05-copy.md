@@ -60,7 +60,7 @@
 | V60 | 1:16 | 15 g coffee → 240 ml water | 93 °C | Medium-fine |
 | AeroPress | 1:15 | 15 g → 225 ml | 85 °C | Fine |
 | French press | 1:15 | 17 g → 255 ml | 94 °C | Coarse |
-| Espresso | 1:2 | 18 g → 36 g in the cup | 93 °C | Fine |
+| Espresso | 1:2 | 9 g → 18 g in the cup per shot (2 shots: 18 g → 36 g; fixed 2026-11-02) | 93 °C | Fine |
 
 ## 6. Find similar coffees
 

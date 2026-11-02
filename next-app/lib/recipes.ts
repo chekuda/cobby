@@ -20,7 +20,7 @@ export const recipes: Recipe[] = [
   { id: "v60", ratio: 16, coffeePerCup: 15, temperature: 93, grind: "mediumFine", kind: "filter", maxCups: 4 },
   { id: "aeropress", ratio: 15, coffeePerCup: 15, temperature: 85, grind: "fine", kind: "filter", maxCups: 2 },
   { id: "frenchPress", ratio: 15, coffeePerCup: 17, temperature: 94, grind: "coarse", kind: "filter", maxCups: 6 },
-  { id: "espresso", ratio: 2, coffeePerCup: 18, temperature: 93, grind: "fine", kind: "espresso", maxCups: 2 },
+  { id: "espresso", ratio: 2, coffeePerCup: 9, temperature: 93, grind: "fine", kind: "espresso", maxCups: 2 },
 ]
 
 export function brew(recipe: Recipe, cups: number) {
