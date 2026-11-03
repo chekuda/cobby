@@ -155,7 +155,16 @@ export function ShopForm({ lang, dict }: { lang: Locale; dict: Labels }) {
   )
 }
 
-export function BuyerForm({ lang, dict }: { lang: Locale; dict: Labels }) {
+export function BuyerForm({
+  lang,
+  dict,
+  children,
+}: {
+  lang: Locale
+  dict: Labels
+  /** Shown under the form: the app's private beta, QR and button (components/app-access.tsx) */
+  children?: React.ReactNode
+}) {
   const [state, action, pending] = useActionState(submitBuyerForm, initial)
   const e = state.errors ?? {}
   const t = dict.buyer
@@ -196,6 +205,7 @@ export function BuyerForm({ lang, dict }: { lang: Locale; dict: Labels }) {
           </button>
         </form>
       )}
+      {children}
     </div>
   )
 }

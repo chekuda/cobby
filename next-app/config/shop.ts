@@ -12,6 +12,8 @@ export type ShopConfig = {
   websiteUrl: string
   /** Page with all the coffees: where "Find similar coffees" links to. */
   shopUrl: string
+  /** The Cobby app for this shop, without a trailing slash. The early-access QR and button open it (grill round 6). */
+  appUrl: string
   /** Where coffee shops and buyers can write. */
   contactEmail: string
   /** Optional short line about the shop, in both languages. */
@@ -23,6 +25,7 @@ export const shop: ShopConfig = {
   logo: "", // TODO(user): add the logo to public/ and write its path here
   websiteUrl: "https://www.specialtycoffeemarket.es",
   shopUrl: "https://www.specialtycoffeemarket.es/category/all-products",
+  appUrl: "https://app.specialtycoffeemarket.es",
   contactEmail: "", // TODO(user): type the contact email here
   tagline: { es: "", en: "" },
 }

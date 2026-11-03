@@ -1,12 +1,19 @@
 import { Coffee } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-import { IconTile, RatingDots, Section, SectionTitle } from "@/components/section"
+import { IconTile, RatingDots, Section, SectionTitle, Sticker } from "@/components/section"
 import type { Dictionary } from "@/dictionaries"
+import { stickerColor } from "@/lib/flavors"
 
 // Section 4 (docs/01-landing.md): the personal coffee shelf, with an
 // illustration built in code (example coffees, not real products)
-export function Shelf({ dict }: { dict: Dictionary["shelf"] }) {
+export function Shelf({
+  dict,
+  families,
+}: {
+  dict: Dictionary["shelf"]
+  families: Dictionary["families"]
+}) {
   return (
     <Section tone="cream" className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <div className="flex max-w-[560px] flex-col gap-4">
@@ -26,6 +33,9 @@ export function Shelf({ dict }: { dict: Dictionary["shelf"] }) {
             <span className="flex min-w-0 flex-1 flex-col">
               <span className="truncate text-body font-semibold text-plum">{item.name}</span>
               <span className="text-caption text-stone">{item.detail}</span>
+              <span className="mt-1.5 flex">
+                <Sticker color={stickerColor[item.family]} index={i}>{families[item.family]}</Sticker>
+              </span>
             </span>
             <RatingDots value={item.rating} />
           </li>

@@ -19,7 +19,7 @@ The landing page does **not** need the app to work. It shows the idea and collec
 - **No prices.** Shops see "Founding partners: talk to us".
 - **Live demo:** a small **working ratio calculator** in "Brew better".
 - **Logo for now:** text logo "cobby" in Inter 600 with a sage dot (see [03-design.md](03-design.md)).
-- **Images:** phone screens are **mockups built in code**; specialtyCoffeeMarket bag photos come later.
+- **Images:** phone screens are **mockups built in code**; specialtyCoffeeMarket bag photos come later. Since grill round 6 the phone shows the app's tasting share card in the app's dark look.
 - **Hosting: Vercel.**
 
 ### Grill round 2
@@ -49,14 +49,15 @@ The landing page does **not** need the app to work. It shows the idea and collec
 | # | Section | Audience | Content |
 |---|---|---|---|
 | 1 | **Menu** | Both | Text logo "cobby", links (How it works · Brew · For coffee shops · FAQ), ES / EN switch, "Bring Cobby to your shop" button (plum) |
-| 2 | **Hero** | Both | "Early access" tag. Main promise (e.g. EN "Snap your bag. Brew it better. Find your next favorite." / ES "Haz una foto a tu café. Prepáralo mejor. Descubre tu próximo favorito."). A phone mockup built in code shows the app. Main button for coffee shops (plum), secondary ghost link for buyers' early access |
+| 2 | **Hero** | Both | "Early access" tag. Main promise (e.g. EN "Snap your bag. Brew it better. Find your next favorite." / ES "Haz una foto a tu café. Prepáralo mejor. Descubre tu próximo favorito."). A phone mockup built in code shows the app's tasting share card (dark, as in the app). Main button for coffee shops (plum), secondary ghost link for buyers' early access |
 | 3 | **How it works** | Buyers | 4 steps: **Snap** the bag → **Cobby reads** name, origin, process and notes → **Save** to "My coffees" → **Brew** with a guided recipe |
 | 4 | **Save your coffees** | Buyers | Your personal coffee shelf: every bag with photo, notes, roast date and your rating |
 | 5 | **Brew better** | Buyers | Ratio calculator and step-by-step timer for V60, AeroPress, French press and espresso. Includes a **small working calculator** right on the page |
 | 6 | **Find similar coffees** | Buyers | Cobby learns your taste (fruity, chocolatey, floral…) and suggests similar coffees in the shop |
+| 6b | **Meet Cobby** (grill round 6) | Buyers | Cobby, the owner's character, big and winking on a sage disc, and his five faces with the rating each stands for (1 to 5 stars) |
 | 7 | **For coffee shops** | Shops | Your brand on the app · "similar coffees" from *your* catalog · customers come back to reorder · works next to any online store. "Coming later": learn what your customers like. "Founding partners: talk to us", no prices |
 | 8 | **FAQ** | Both | Which bags work? Where are my coffees saved? Does it cost anything? Which languages? Do I need to download anything? (No, it works in the browser) |
-| 9 | **Call to action** | Both | Main: "Bring Cobby to your shop" (coffee shops). Secondary: "Get early access" (buyers) |
+| 9 | **Call to action** | Both | Main: "Bring Cobby to your shop" (coffee shops). Secondary: "Get early access" (buyers), and under it the app's **private beta**: a QR to open it on the phone (computers) or an "Open the app" button (phones) |
 | 10 | **Footer** | Both | Logo, short description, language switch, contact, links to the privacy policy and legal notice |
 | — | **Legal pages** | Both | Privacy policy and legal notice, ES and EN, details from the legal config |
 
@@ -114,7 +115,7 @@ One step at a time; the user reviews each before the next.
 4. ✅ The ratio calculator (recipes in [05-copy.md](05-copy.md))
 5. ✅ Forms + Google Sheet (code done; the Sheet itself is set up by the user with [06-forms-setup.md](06-forms-setup.md)): Claude writes the Apps Script and a step-by-step guide in `docs/06-forms-setup.md` (new); the user creates the Sheet, pastes the script and sets `FORMS_WEBHOOK_URL` in Vercel
 6. ✅ Legal pages (texts done; the details in `config/legal.ts` are filled in by the user)
-7. ⏳ Publish on Vercel Hobby (demo): import the GitHub repo `chekuda/cobby` with Root Directory `next-app` and set `FORMS_WEBHOOK_URL`. Needs the user's GitHub push and Vercel account
+7. ✅ Publish on Vercel Hobby (demo): the GitHub repo `chekuda/cobby` with Root Directory `next-app`, live at https://cobby-omega.vercel.app (confirmed 2026-11-03). `FORMS_WEBHOOK_URL` is set there by the user
 
 Steps 3–6 were built together on 2026-10-29, at the user's request.
 
@@ -170,6 +171,21 @@ Texts added to the dictionaries beyond [05-copy.md](05-copy.md): FAQ title, "See
 
 **About the `cobby-lang` cookie:** it only remembers the language the visitor chose, so it counts as a preference cookie that doesn't need a cookie banner. The privacy policy (step 6) should still mention it.
 
+## How grill round 6 works (2026-11-03)
+
+Decisions: [04-grilling.md](04-grilling.md), round 6 (Q37–Q44).
+
+| File (in `next-app/`) | What it does |
+|---|---|
+| `components/phone-mockup.tsx` | The hero phone, now the app's **tasting share card** in the app's dark look: "cobby" + "by {shopName}", the coffee on its family color, name in condensed caps, light Cobby (wink = 4 stars) + stars + "4 out of 5", a V60 chip and three note stickers, the app's address |
+| `components/cobby.tsx` | Cobby from the owner's SVGs (copied from `cobby-app`): one face, or `winking` (smile, eyes open, winks every 4 s and on hover). `tone="light"` for the dark phone |
+| `components/meet-cobby.tsx` | "Meet Cobby" (after "Find similar coffees", white band): big winking Cobby on a sage disc, text, and the five faces as cream cards with their 1–5 rating dots |
+| `components/app-access.tsx` | Under the early-access form: "Private beta" sticker; on computers (≥768px) a **QR** made at build time (`qrcode`, inline SVG, no browser JavaScript) and the text; on phones the text and an "Open the app" button |
+| `lib/app-link.ts` | The app link in the page's language with UTM tags: `{appUrl}/{lang}?utm_source=landing&utm_medium=qr` (or `button`) |
+| `config/shop.ts` | New `appUrl` (`https://app.specialtycoffeemarket.es`) |
+| `lib/flavors.ts`, `components/section.tsx` (`Sticker`) | Flavor families and their sticker colors; the sticker pill. Used on the hero tag, the shelf (one family per coffee), "Find similar coffees" (all five families) and the phone |
+| `app/[lang]/layout.tsx`, `app/globals.css` | Archivo for `h1` / `h2`, sticker and phone colors, springy press, Cobby's wink and sway |
+
 ## Still to define in the workshop
 
 - [x] ~~Design: colors, fonts, style~~ → [03-design.md](03-design.md) (display font, logo and images still open there)
@@ -178,7 +194,7 @@ Texts added to the dictionaries beyond [05-copy.md](05-copy.md): FAQ title, "See
 - [x] ~~Where the forms send the data~~ → Google Sheet via Apps Script (`FORMS_WEBHOOK_URL`)
 - [ ] Legal details (name or company, tax ID, address, contact email) in `config/legal.ts`: the pages show "[to be completed]" until then
 - [ ] Google Sheet + Apps Script + `FORMS_WEBHOOK_URL` ([06-forms-setup.md](06-forms-setup.md))
-- [ ] Publish on Vercel (step 7)
+- [x] ~~Publish on Vercel (step 7)~~ → https://cobby-omega.vercel.app
 - [x] ~~Whether specialtyCoffeeMarket appears~~ → yes, as the default shop, set in `config/shop.ts`
 - [x] ~~Fields and values of the shop config~~ → `config/shop.ts`, values above (grill round 3)
 - [ ] Shop logo file and contact email (the user adds them)

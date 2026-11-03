@@ -71,6 +71,21 @@ Context: Vercel's free Hobby plan is for non-commercial personal use only ([Verc
 
 > **From round 6 on, questions are open** (user's preference, 2026-10-29): options and trade-offs, no recommended answer, no "yes to all". Rounds 1–4 used recommended answers, and the user accepted them all.
 
+## Round 6: phone mockup, Cobby and QR (2026-11-03), answered and built
+
+Context: the app (`~/Desktop/me/code/cobby-app`, live at `https://app.specialtycoffeemarket.es` for a friends test) was redesigned "dark urban" on 2026-11-03, so the hero's phone mockup no longer looks like it. The owner wants the mockup to match the app, to show Cobby (the mascot), and a QR that opens the app. The work stays in **this** project (the landing live at `https://cobby-omega.vercel.app`); `cobby-app` isn't changed. Open questions, no recommended answer.
+
+| # | Question | Decision |
+|---|---|---|
+| Q37 | **Phone mockup.** Real screenshot of the app, mockup rebuilt in code in the app's new look, or several screens? | **Owner: "you choose."** Claude's choice: **rebuilt in code in the app's dark look** (espresso screen, plum cards, flavor stickers): it shows what people will find, works in ES and EN, and doesn't go stale with every screenshot |
+| Q38 | **Which screen** the phone shows (coffee card, "My coffees" shelf, guided recipe, share card) | **Owner: the tasting share card** (as in the app's U7: coffee photo on its family color, name in big condensed caps, Cobby's face for the stars, flavor stickers) |
+| Q39 | **Landing look.** Stays cream, cream with touches of the app's new style, or fully dark? | **Owner: cream with as many touches of the new style as possible.** The palette and the cream bands stay. Touches: section and page titles in **Archivo extra condensed caps** (text stays Inter), tasting notes and chips as **flavor stickers** (peach, lilac, honey, hazelnut, terracotta, dark text) **slightly tilted**, **springy press** on buttons and links. Motion stays inside `prefers-reduced-motion: no-preference` |
+| Q40 | **Where Cobby goes.** Next to the logo, in the hero, a small "Meet Cobby" section, or as a mascot across sections? | **Owner: a small "Meet Cobby" section** with his 5 faces and what each means (1 to 5 stars). On cream he uses the original dark version (hair `#605856`, face `#2E2836`), copied from `cobby-app` |
+| Q41 | **Does Cobby move?** Still, a wink or face change on hover (with reduced motion respected), or the app's GIF | **Owner: he winks and moves.** Every few seconds and on hover; still with reduced motion |
+| Q42 | **QR address.** Plain app address or with UTM tags (`?utm_source=landing&utm_medium=qr`) | **Owner: with UTM tags**, to see who comes from the landing: `utm_source=landing&utm_medium=qr` (the phone button uses `utm_medium=button`) |
+| Q43 | **QR place and generation.** Desktop only or everywhere; hero, early access / contact, or footer; static SVG in `public/` or a library at build | **Owner: "as you see fit."** Claude's choice: **in the early-access block**, next to the "private beta, ask for access" text; **QR on desktop only**, a "Open the app" button on phones. Made **at build time with a small QR library as inline SVG** (no client JavaScript), from one app address in the config, so it can't drift from the link |
+| Q44 | **The app is a private friends test.** Public QR now ("try it"), QR only when the app opens, or QR now with an honest "private beta, ask for access" text? | **Owner: QR now with an honest text** ("private beta, ask for access") |
+
 ## Status
 
 **Landing page (phase 1): description done**, 32 decisions over 4 rounds. Waiting for the user to confirm the shared understanding before building step 1.

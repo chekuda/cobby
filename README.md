@@ -11,14 +11,15 @@ Cobby helps coffee lovers **keep track of the coffees they buy, brew them better
 
 ### What the landing page has
 
-- **Hero:** "Haz una foto a tu café. Prepáralo mejor." on a warm blob background, with a phone mockup of the app built in code.
+- **Hero:** "Haz una foto a tu café. Prepáralo mejor." on a warm blob background, with a phone built in code showing the app's tasting share card in the app's dark look.
 - **How it works** (four steps), **your coffee shelf**, and **Brew better** with a **working ratio calculator** (V60, AeroPress, French press, espresso).
-- **Similar coffees**, linking to the shop (specialtyCoffeeMarket by default).
+- **Similar coffees**, linking to the shop (specialtyCoffeeMarket by default), with the flavor families as stickers.
+- **Meet Cobby:** the mascot, winking, and his five faces (1 to 5 stars).
 - **For coffee shops** on a plum band: the real benefits, "coming later" insights, and a founding-partners call to action (no prices).
-- **FAQ**, a **coffee-shop contact form** and an **early-access form**, both with GDPR consent.
+- **FAQ**, a **coffee-shop contact form** and an **early-access form**, both with GDPR consent. Under the early-access form, the app's **private beta**: a QR to open it on the phone (an "Open the app" button on phones), tagged `utm_source=landing`.
 - **Privacy policy** and **legal notice** pages.
 - **ES / EN** at `/es` and `/en`. Visitors to `/` go to their language, Spanish by default.
-- specialtyCoffeeMarket's **palette and images**, subtle **animations** (off for visitors who ask for reduced motion), and cookie-free **Vercel Web Analytics**.
+- specialtyCoffeeMarket's **palette and images**, with touches of the app's look (condensed caps titles, tilted flavor stickers, springy buttons), subtle **animations** (off for visitors who ask for reduced motion), and cookie-free **Vercel Web Analytics**.
 
 ### Before going live
 
@@ -27,7 +28,7 @@ Cobby helps coffee lovers **keep track of the coffees they buy, brew them better
 - [x] Set up the Google Sheet for the forms ([docs/06-forms-setup.md](docs/06-forms-setup.md)); tested locally
 - [ ] Have the legal texts checked (they're a starting point, not legal advice)
 - [ ] Push to GitHub (`chekuda/cobby`, private)
-- [ ] Publish on Vercel Hobby (free, for the demo) and add `FORMS_WEBHOOK_URL` there. Hobby is non-commercial: move to Netlify free or a paid plan once Cobby is pitched to shops for real
+- [x] Published on Vercel Hobby (free, for the demo): https://cobby-omega.vercel.app. `FORMS_WEBHOOK_URL` must be set there too. Hobby is non-commercial: move to Netlify free or a paid plan once Cobby is pitched to shops for real
 - [ ] Later: buy a domain (the free `.vercel.app` address comes first)
 
 ## The idea in one minute

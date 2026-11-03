@@ -6,7 +6,7 @@
 
 | Phase | State |
 |---|---|
-| 1. **Landing page** (`next-app/`) | **Built**: every section, working ratio calculator, two forms, privacy and legal pages, ES/EN, specialtyCoffeeMarket palette, animations. Build steps 1–6 of 7 done. **Step 7, publishing on Vercel, is pending.** Spec: [`docs/01-landing.md`](docs/01-landing.md) |
+| 1. **Landing page** (`next-app/`) | **Built**: every section, working ratio calculator, two forms, privacy and legal pages, ES/EN, specialtyCoffeeMarket palette, animations. All 7 build steps done; **live on Vercel Hobby at https://cobby-omega.vercel.app** (confirmed by the user 2026-11-03). **Grill round 6 (mockup in the app's new look, "Meet Cobby" section, QR to the app) in progress.** Spec: [`docs/01-landing.md`](docs/01-landing.md) |
 | 2. **The app** (photo of the bag → Ollama reads the label → "My coffees" → guided brew → rating → similar coffees) | **Not started.** Spec: [`docs/02-app.md`](docs/02-app.md). Starts only when the user says the landing page is done, with its own grill-me rounds first |
 
 ### Waiting on the user (don't do these for them)
@@ -15,7 +15,7 @@
 - Fill in `contactEmail` (and optionally `logo`) in `next-app/config/shop.ts`.
 - Create the Google Sheet + Apps Script and set `FORMS_WEBHOOK_URL` ([`docs/06-forms-setup.md`](docs/06-forms-setup.md)). Until then the forms answer "Couldn't send it".
 - Have the legal texts checked (they're a starting point, not legal advice).
-- Push to GitHub (`origin` = `git@github.com:chekuda/cobby.git` is set; the repo must be created on github.com first), then publish on **Vercel Hobby** (step 7): import the repo with Root Directory `next-app` and set `FORMS_WEBHOOK_URL`. Nothing is linked to Vercel yet (no `.vercel/`).
+- The landing is published on **Vercel Hobby** at `https://cobby-omega.vercel.app` (imported from GitHub with Root Directory `next-app`). Setting `FORMS_WEBHOOK_URL` there is the user's job.
 - **Hosting is Vercel Hobby only for the demo** (grill round 5). Hobby is non-commercial; when Cobby is actively pitched to shops or earns money, move to Netlify free (needs: remove `@vercel/analytics`, update the privacy texts, `netlify.toml`, `packageManager` field) or a paid Vercel plan.
 
 ## How we work
@@ -53,8 +53,9 @@
 | `lib/text.ts` | `fill()` for `{placeholders}` |
 | `lib/recipes.ts` | Calculator recipes (approved in grill round 4) |
 | `lib/utils.ts` | **`cn()` configured with the custom text sizes.** Always import `cn` from `@/lib/utils`, never from `"cn"`, or `text-body` & co. will wipe out text colors |
-| `components/section.tsx` | `Section` (paper / cream / plum band + scroll reveal), `SectionTitle`, `IconTile`, `RatingDots`, `ArrowDot` |
-| `components/*.tsx` | One file per section (`hero`, `how-it-works`, `shelf`, `brew-section` + `ratio-calculator`, `similar`, `for-shops`, `faq`, `contact` + `contact-forms`), plus `site-header`, `site-footer`, `language-switch`, `logo`, `phone-mockup` |
+| `components/section.tsx` | `Section` (paper / cream / plum band + scroll reveal), `SectionTitle`, `IconTile`, `RatingDots`, `ArrowDot`, `Sticker` |
+| `components/*.tsx` | One file per section (`hero`, `how-it-works`, `shelf`, `brew-section` + `ratio-calculator`, `similar`, `meet-cobby`, `for-shops`, `faq`, `contact` + `contact-forms` + `app-access` (QR)), plus `site-header`, `site-footer`, `language-switch`, `logo`, `phone-mockup` (the app's share card, dark), `cobby` (the mascot) |
+| `lib/flavors.ts`, `lib/app-link.ts` | Flavor families + sticker colors; the app link with UTM tags (`appUrl` lives in `config/shop.ts`) |
 | `app/globals.css` | Theme tokens (palette → shadcn tokens), type scale utilities (`text-caption` … `text-display`), animation classes |
 | `public/blobs.webp`, `public/coffee-lettering.webp` | specialtyCoffeeMarket images: hero background and the "coffee" lettering on the plum band |
 
@@ -63,6 +64,7 @@
 - **Palette (specialtyCoffeeMarket):** plum `#2E2836` (text, main buttons, plum band, footer), stone `#605856` (paragraphs), sand `#CFBEB4` (borders, text on plum), cream `#ECE7E3` (alternating bands), white, sage `#CACE91` (the colorful accent, **fills only, never text on white**).
 - **Structure** from a Brex style reference (Inter with negative tracking, 12px radius, 6px for tags, flat cards, 1200px column). **Never use anything that identifies Brex.**
 - **Motion:** CSS only, in `globals.css` (`anim-rise`, `reveal`, `anim-float`, `anim-pulse`, `anim-drift`, `anim-pop`, `lift`), all inside `prefers-reduced-motion: no-preference`. New animations must follow the same rule.
+- **Touches of the app (grill round 6):** `h1` / `h2` in Archivo extra condensed caps (text stays Inter); flavor stickers (peach, lilac, honey, hazelnut, terracotta, plum text, tilted pills); springy press on buttons and links; Cobby (dark version on light bands). Espresso / foam / smoke only inside the phone mockup.
 - Don't invent what the design doc leaves open (real logo, other fonts…); propose it and mark it as a proposal.
 
 ## Commands

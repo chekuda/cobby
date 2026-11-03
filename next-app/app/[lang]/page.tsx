@@ -6,6 +6,7 @@ import { Faq } from "@/components/faq"
 import { ForShops } from "@/components/for-shops"
 import { Hero } from "@/components/hero"
 import { HowItWorks } from "@/components/how-it-works"
+import { MeetCobby } from "@/components/meet-cobby"
 import { Shelf } from "@/components/shelf"
 import { Similar } from "@/components/similar"
 import { getDictionary } from "@/dictionaries"
@@ -21,9 +22,10 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
     <main>
       <Hero dict={dict.hero} mockup={dict.mockup} />
       <HowItWorks dict={dict.howItWorks} />
-      <Shelf dict={dict.shelf} />
+      <Shelf dict={dict.shelf} families={dict.families} />
       <BrewSection dict={dict.brew} />
-      <Similar dict={dict.similar} />
+      <Similar dict={dict.similar} families={dict.families} />
+      <MeetCobby dict={dict.cobby} />
       <ForShops dict={dict.shops} />
       <Faq dict={dict.faq} />
       <Contact lang={lang} dict={dict.forms} />

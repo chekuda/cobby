@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Archivo, Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 
 import "../globals.css"
@@ -11,11 +11,18 @@ import { getDictionary } from "@/dictionaries"
 import { hasLocale, locales } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
-// Cobby uses Inter only (docs/03-design.md)
+// Inter for text, Archivo for titles (docs/03-design.md)
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-sans",
+})
+
+// Titles (grill round 6, Q39): Archivo, extra condensed and heavy, in caps, as in the app
+const archivo = Archivo({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  variable: "--font-display",
 })
 
 // Only /es and /en exist; any other first segment is a 404
@@ -44,7 +51,7 @@ export default async function RootLayout({
 
   return (
     // Light only in phase 1 (docs/03-design.md), so no theme provider
-    <html lang={lang} className={cn("antialiased", "font-sans", inter.variable)}>
+    <html lang={lang} className={cn("antialiased", "font-sans", inter.variable, archivo.variable)}>
       <body>
         <SiteHeader lang={lang} dict={dict.header} />
         {children}

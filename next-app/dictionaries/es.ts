@@ -2,6 +2,8 @@
 // `{shopName}` is filled in from config/shop.ts; `{ownerName}`, `{taxId}`,
 // `{address}` and `{email}` from config/legal.ts.
 
+import type { Family } from "@/lib/flavors"
+
 const es = {
   meta: {
     title: "Cobby · Haz una foto a tu café. Prepáralo mejor.",
@@ -29,19 +31,24 @@ const es = {
     secondary: "Quiero probarlo",
     note: "Funciona en el navegador del móvil. Sin descargas.",
   },
-  // Example coffee shown inside the phone mockup (an illustration, not a real product)
+  // Flavor families, as in the app (stickers on the shelf, the similar coffees and the mockup)
+  families: {
+    fruity: "Frutal",
+    floral: "Floral",
+    sweet: "Dulce",
+    nutty: "Frutos secos",
+    spicy: "Especiado",
+  },
+  // Example tasting share card shown inside the phone mockup (an illustration, not a real product)
   mockup: {
-    label: "Ejemplo de la app Cobby: la ficha de un café guardado",
-    screenTitle: "Mis cafés",
+    label: "Ejemplo de la app Cobby: la tarjeta para compartir una cata",
+    byShop: "por {shopName}",
     coffeeName: "Guji Hambela",
-    origin: "Etiopía · Guji",
-    process: "Lavado",
-    notesLabel: "Notas de cata",
+    details: "Etiopía · Guji · Lavado",
+    stars: 4,
+    outOf: "{n} de 5",
+    method: "V60",
     notes: ["Jazmín", "Melocotón", "Bergamota"],
-    roasted: "Tostado el 15 oct",
-    ratingLabel: "Tu puntuación",
-    brew: "Prepararlo",
-    similar: "Parecidos en {shopName}",
   },
   howItWorks: {
     title: "Cuatro pasos, de la bolsa a la taza",
@@ -70,9 +77,9 @@ const es = {
     // Example coffees for the illustration
     label: "Ejemplo de la estantería de cafés en Cobby",
     items: [
-      { name: "Guji Hambela", detail: "Etiopía · Lavado", rating: 4 },
-      { name: "La Esperanza", detail: "Colombia · Honey", rating: 5 },
-      { name: "Huila Pink Bourbon", detail: "Colombia · Natural", rating: 3 },
+      { name: "Guji Hambela", detail: "Etiopía · Lavado", rating: 4, family: "floral" as Family },
+      { name: "La Esperanza", detail: "Colombia · Honey", rating: 5, family: "sweet" as Family },
+      { name: "Huila Pink Bourbon", detail: "Colombia · Natural", rating: 3, family: "fruity" as Family },
     ],
   },
   brew: {
@@ -108,6 +115,15 @@ const es = {
     title: "Descubre tu próximo favorito",
     text: "Cobby se fija en los cafés que mejor puntúas (afrutados, dulces, florales…) y te sugiere cafés parecidos en {shopName}.",
     link: "Ver los cafés de {shopName}",
+    familiesLabel: "Familias de sabor",
+  },
+  cobby: {
+    title: "Este es Cobby",
+    text: "Cobby también es un personaje. Te acompaña en la app y, cuando puntúas un café, pone la cara por ti: de «meh» a «¡me encanta!».",
+    label: "Cobby, guiñando un ojo",
+    facesLabel: "Las caras de Cobby, de 1 a 5 estrellas",
+    faces: ["Meh", "¡Anda!", "Rico", "Me gusta", "¡Me encanta!"],
+    stars: "{n} de 5 estrellas",
   },
   shops: {
     title: "Para tiendas y tostadores",
@@ -183,6 +199,14 @@ const es = {
       placeholder: "tu@email.com",
       submit: "Quiero acceso anticipado",
       success: "¡Apuntado! Te avisaremos.",
+    },
+    // The app is a private test for now (grill round 6, Q44)
+    app: {
+      tag: "Beta privada",
+      text: "La app ya funciona con un grupo pequeño. Escanea el código para abrirla en el móvil y, si aún no tienes acceso, pídelo con tu email aquí arriba.",
+      textPhone: "La app ya funciona con un grupo pequeño. Ábrela y, si aún no tienes acceso, pídelo con tu email aquí arriba.",
+      qrLabel: "Código QR para abrir la app de Cobby en el móvil",
+      open: "Abrir la app",
     },
   },
   footer: {

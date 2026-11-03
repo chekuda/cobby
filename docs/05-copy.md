@@ -149,3 +149,16 @@ These texts were needed by the page and are already in `next-app/dictionaries/`:
 | Legal pages | Full texts for the privacy policy and legal notice (see `dictionaries/es.ts`, `legal`) | same, in English |
 
 **The legal texts are a starting point, not legal advice.** Have them checked before publishing.
+
+## Added in grill round 6 (2026-11-03)
+
+| | ES | EN |
+|---|---|---|
+| Phone (share card) | por {shopName} · Guji Hambela · Etiopía · Guji · Lavado · 4 de 5 · V60 · Jazmín, Melocotón, Bergamota | by {shopName} · Guji Hambela · Ethiopia · Guji · Washed · 4 out of 5 · V60 · Jasmine, Peach, Bergamot |
+| Flavor families (stickers) | Frutal · Floral · Dulce · Frutos secos · Especiado | Fruity · Floral · Sweet · Nutty · Spicy |
+| Meet Cobby: title | Este es Cobby | Meet Cobby |
+| Meet Cobby: text | Cobby también es un personaje. Te acompaña en la app y, cuando puntúas un café, pone la cara por ti: de «meh» a «¡me encanta!». | Cobby is also a character. He keeps you company in the app, and when you rate a coffee, he pulls the face for you: from “meh” to “love it!”. |
+| Cobby's faces (1–5 stars) | Meh · ¡Anda! · Rico · Me gusta · ¡Me encanta! | Meh · Oh! · Nice · Like it · Love it! |
+| Private beta tag | Beta privada | Private beta |
+| Private beta, computers (next to the QR) | La app ya funciona con un grupo pequeño. Escanea el código para abrirla en el móvil y, si aún no tienes acceso, pídelo con tu email aquí arriba. | The app is already up and running with a small group. Scan the code to open it on your phone, and if you don't have access yet, ask for it with your email above. |
+| Private beta, phones | La app ya funciona con un grupo pequeño. Ábrela y, si aún no tienes acceso, pídelo con tu email aquí arriba. · Abrir la app | The app is already up and running with a small group. Open it, and if you don't have access yet, ask for it with your email above. · Open the app |

@@ -32,18 +32,22 @@ const en: Dictionary = {
     note: "Works in your phone's browser. Nothing to download.",
   },
   // Example coffee shown inside the phone mockup (an illustration, not a real product)
+  families: {
+    fruity: "Fruity",
+    floral: "Floral",
+    sweet: "Sweet",
+    nutty: "Nutty",
+    spicy: "Spicy",
+  },
   mockup: {
-    label: "Example of the Cobby app: a saved coffee's card",
-    screenTitle: "My coffees",
+    label: "Example of the Cobby app: a tasting share card",
+    byShop: "by {shopName}",
     coffeeName: "Guji Hambela",
-    origin: "Ethiopia · Guji",
-    process: "Washed",
-    notesLabel: "Tasting notes",
+    details: "Ethiopia · Guji · Washed",
+    stars: 4,
+    outOf: "{n} out of 5",
+    method: "V60",
     notes: ["Jasmine", "Peach", "Bergamot"],
-    roasted: "Roasted Oct 15",
-    ratingLabel: "Your rating",
-    brew: "Brew it",
-    similar: "Similar at {shopName}",
   },
   howItWorks: {
     title: "Four steps, from bag to cup",
@@ -69,9 +73,9 @@ const en: Dictionary = {
     // Example coffees for the illustration
     label: "Example of the coffee shelf in Cobby",
     items: [
-      { name: "Guji Hambela", detail: "Ethiopia · Washed", rating: 4 },
-      { name: "La Esperanza", detail: "Colombia · Honey", rating: 5 },
-      { name: "Huila Pink Bourbon", detail: "Colombia · Natural", rating: 3 },
+      { name: "Guji Hambela", detail: "Ethiopia · Washed", rating: 4, family: "floral" },
+      { name: "La Esperanza", detail: "Colombia · Honey", rating: 5, family: "sweet" },
+      { name: "Huila Pink Bourbon", detail: "Colombia · Natural", rating: 3, family: "fruity" },
     ],
   },
   brew: {
@@ -107,6 +111,15 @@ const en: Dictionary = {
     title: "Find your next favorite",
     text: "Cobby looks at the coffees you rate highest (fruity, sweet, floral…) and suggests similar ones at {shopName}.",
     link: "See the coffees at {shopName}",
+    familiesLabel: "Flavor families",
+  },
+  cobby: {
+    title: "Meet Cobby",
+    text: "Cobby is also a character. He keeps you company in the app, and when you rate a coffee, he pulls the face for you: from “meh” to “love it!”.",
+    label: "Cobby, winking",
+    facesLabel: "Cobby's faces, from 1 to 5 stars",
+    faces: ["Meh", "Oh!", "Nice", "Like it", "Love it!"],
+    stars: "{n} out of 5 stars",
   },
   shops: {
     title: "For coffee shops and roasters",
@@ -179,6 +192,13 @@ const en: Dictionary = {
       placeholder: "you@email.com",
       submit: "Get early access",
       success: "You're on the list! We'll let you know.",
+    },
+    app: {
+      tag: "Private beta",
+      text: "The app is already up and running with a small group. Scan the code to open it on your phone, and if you don't have access yet, ask for it with your email above.",
+      textPhone: "The app is already up and running with a small group. Open it, and if you don't have access yet, ask for it with your email above.",
+      qrLabel: "QR code to open the Cobby app on your phone",
+      open: "Open the app",
     },
   },
   footer: {

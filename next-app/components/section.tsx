@@ -75,3 +75,37 @@ export function ArrowDot({ children }: { children: React.ReactNode }) {
     </span>
   )
 }
+
+// Stickers sit a little crooked, as if stuck by hand: the tilt goes by position
+const tilts = ["-rotate-2", "rotate-[1.5deg]", "-rotate-1"]
+
+/**
+ * A flavor sticker, as in the app: a colored pill with a dark outline and dark
+ * text, a little crooked. The tilt doesn't move, so it stays with reduced motion.
+ */
+export function Sticker({
+  color,
+  index = 0,
+  className,
+  children,
+}: {
+  /** A sticker color class, e.g. stickerColor.fruity from lib/flavors.ts */
+  color: string
+  /** Position in a row of stickers, so neighbours lean different ways */
+  index?: number
+  className?: string
+  children: React.ReactNode
+}) {
+  return (
+    <span
+      className={cn(
+        "inline-flex rounded-full border-2 border-plum/55 px-2.5 py-0.5 text-caption font-semibold text-plum",
+        tilts[index % tilts.length],
+        color,
+        className
+      )}
+    >
+      {children}
+    </span>
+  )
+}

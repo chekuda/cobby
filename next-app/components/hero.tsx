@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 import { PhoneMockup } from "@/components/phone-mockup"
-import { ArrowDot } from "@/components/section"
+import { ArrowDot, Sticker } from "@/components/section"
 import { buttonVariants } from "@/components/ui/button"
 import type { Dictionary } from "@/dictionaries"
 
@@ -22,11 +22,11 @@ export function Hero({
     <section className="bg-cream bg-[url('/blobs.webp')] bg-cover bg-center">
       <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-4 py-12 md:px-8 md:py-20 lg:grid-cols-[1fr_auto] lg:gap-16">
         <div className="flex max-w-[600px] flex-col items-start gap-6">
-          <span
-            className="anim-rise rounded-sm bg-sage px-2.5 py-1 text-caption font-semibold text-plum"
-            style={delay(0)}
-          >
-            {dict.tag}
+          {/* "Early access" as a sage sticker, a little crooked like the app's (Q39) */}
+          <span className="anim-rise" style={delay(0)}>
+            <Sticker color="bg-sage" className="py-1">
+              {dict.tag}
+            </Sticker>
           </span>
 
           <h1

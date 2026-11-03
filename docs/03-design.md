@@ -22,6 +22,13 @@ From darker to lighter:
 | Paper | `#FFFFFF` | `paper` | Page background, cards, inputs |
 | Sage | `#CACE91` | `sage` | **The colorful accent:** "Early access" tag, icon tiles, tasting-note chips, the selected calculator method, the form success message, arrow dots, the logo dot, the founding-partners box, the disc behind the hero phone |
 
+**From the app (grill round 6, 2026-11-03).** Touches of the app's "dark urban" look, used on the cream landing:
+
+| Name | Value | Token | Use |
+|---|---|---|---|
+| Peach, lilac, honey, hazelnut, terracotta | `#F4A98A`, `#D9C2E9`, `#F2D27E`, `#D4AE86`, `#E8876B` | `peach` … `terracotta` | **Flavor stickers** (fruity, floral, sweet, nutty, spicy; `lib/flavors.ts`), always with plum text. Honey also fills the stars in the phone |
+| Espresso, foam, smoke | `#17141B`, `#F1ECE8`, `#B9AEA7` | `espresso`, `foam`, `smoke` | **Only inside the phone mockup**, which shows the dark app: screen, text, secondary text |
+
 shadcn tokens: `primary` = plum (white text), `secondary` = sage, `muted` / `accent` = cream, `border` / `input` = sand, `ring` = plum.
 
 ### Readability (contrast)
@@ -38,7 +45,7 @@ shadcn tokens: `primary` = plum (white text), `secondary` = sage, `muted` / `acc
 
 - **Plum is the main action** (filled button with white text). On the plum band, the main box is sage with a plum button.
 - **Sage is for fills, not text** on light backgrounds.
-- Section rhythm, top to bottom: hero (cream with blobs) → white → cream → white → cream → **plum** → white → cream → **plum footer**.
+- Section rhythm, top to bottom: hero (cream with blobs) → white → cream → white → cream → white (Meet Cobby) → **plum** → white → cream → **plum footer**.
 - Error messages keep shadcn's red (`destructive`).
 
 ## Images
@@ -50,11 +57,12 @@ Both are in `next-app/public/`:
 | `blobs.webp` | Soft warm blob shapes (two creams) | Hero background (`bg-cover`) |
 | `coffee-lettering.webp` | Hand-lettered "coffee", white on transparent | Large and faint (7% opacity) behind the "For coffee shops" plum band, drifting slowly. Only works on dark backgrounds |
 
-Phone screens and the shelf are still **built in code**. specialtyCoffeeMarket bag photos can come later.
+Phone screens and the shelf are still **built in code**. Since grill round 6 the phone shows the app's **tasting share card in the app's dark look** (espresso screen in a plum frame, big plum circle in a corner, coffee on a lilac panel tilted −2°, name in condensed caps, light Cobby winking for 4 stars, honey stars, a dark V60 chip and flavor stickers, the app's address at the bottom). specialtyCoffeeMarket bag photos can come later.
 
 ## Typography
 
-- **Inter** (Google Fonts), weights **400, 500, 600**, for everything. No display font (grill round 3).
+- **Inter** (Google Fonts), weights **400, 500, 600**, for text, buttons, cards (`h3`) and the logo.
+- **Titles (grill round 6):** page and section titles (`h1`, `h2`) use **Archivo extra condensed (62 % width), weight 800, in caps**, line height 1, no tracking, as in the app. The sizes stay the scale below. Loaded with `next/font` (`--font-display`); the rule is at the end of `globals.css`. This replaces "no display font" from grill round 3.
   - **Negative letter-spacing at every size:** `-0.01em` up to 24px, `-0.02em` at 36px, `-0.025em` at 48px, `-0.03em` at 72px.
   - Ligatures off: `font-feature-settings: "calt" 0, "liga" 0, "ss03", "cv01", "cv10";`
   - 500 for UI, 600 for emphasis and headings.
@@ -77,7 +85,7 @@ On phones, the hero headline is 36px (48px on tablets, 72px on desktop).
 ## Spacing, shapes and layout
 
 - **Base unit 8px.** Scale: 8, 16, 24, 32, 48, 72, 80, 160.
-- **Radius:** **12px** for buttons, inputs and cards; **6px** (`rounded-sm`) for tags and chips. Circles for dots. The phone mockup frame is an illustration, so it uses a large radius.
+- **Radius:** **12px** for buttons, inputs and cards; **6px** (`rounded-sm`) for small chips. **Stickers are pills** (fully round, 2px plum outline at 55 %, tilted −2°, 1.5° or −1° by position; `Sticker` in `components/section.tsx`). Circles for dots. The phone mockup frame is an illustration, so it uses a large radius.
 - **Max width 1200px**, centered. Section padding 48–80px. Card padding 24–32px.
 - **On phones:** 16px side margin and no horizontal scroll.
 - **No shadows** on cards; separation comes from color (white on cream, cream on white, translucent white on plum). Floating elements (the phone menu) use one soft shadow.
@@ -96,6 +104,11 @@ All animation lives in `next-app/app/globals.css` and is **off for visitors who 
 | `anim-drift` | Very slow side-to-side drift | "coffee" lettering on the plum band |
 | `anim-pop` | Quick scale-in when a value changes | Calculator results and cup count, form success message |
 | `lift` | Moves up 2px on hover | Buttons, step and benefit cards |
+| Springy press | Scales to 0.96 while pressed, bouncy release (on every `button` and `a`, as in the app) | Buttons and links |
+| `cobby-wink` / `cobby-eye` | Cobby closes his left eye for a moment every 4 s, and while hovered | Big Cobby in "Meet Cobby" |
+| `anim-bob` | Slow sway and bob | Big Cobby in "Meet Cobby" |
+
+The stickers' tilt doesn't move, so it stays with reduced motion; with reduced motion Cobby keeps both eyes open and stands still.
 
 Keep motion subtle: nothing loops fast, nothing blocks reading, and the page must be complete with animations off.
 
@@ -107,7 +120,9 @@ Keep motion subtle: nothing loops fast, nothing blocks reading, and the page mus
 | **Primary button** | Plum fill, white text, 12px, Inter 600 (`buttonVariants()` + `lift`) |
 | **Secondary link** | Plum text + arrow inside a sage dot (`ArrowDot`) |
 | **Outline button** | Plum border, plum text (buyer form) |
-| **Tag** | Sage fill, plum text, 6px |
+| **Sticker** | Colored pill, plum outline at 55 %, plum text, a little crooked. Sage for status ("Early access", "Private beta"), flavor colors for flavor families and tasting notes |
+| **Cobby** | The owner's character (`components/cobby.tsx`, drawn from the app's copy of his SVGs). On light bands: hair stone, face plum; in the dark phone: hair smoke, face foam. Five faces = 1 to 5 stars (meh, surprised, content, wink, delighted) |
+| **QR** | Plum modules on white, 12px corners, made at build time (`qrcode` library, inline SVG) |
 | **Icon tile** | Sage square, plum icon (`IconTile`) |
 | **Cards** | Cream on white bands, white on cream bands, translucent white on plum |
 | **Inputs** | White, sand border, 12px, plum focus ring |
@@ -129,7 +144,7 @@ Keep motion subtle: nothing loops fast, nothing blocks reading, and the page mus
 
 ## Still to decide
 
-- [x] ~~Display font~~ → Inter only (grill round 3)
+- [x] ~~Display font~~ → Inter only (grill round 3); since round 6, Archivo extra condensed caps for `h1` / `h2`
 - [x] ~~Whether the shop config can change colors~~ → no; the palette is the same for every shop
 - [x] ~~Cobby logo~~ → text logo with a sage dot for now; a real logo later
 - [x] ~~Images~~ → `blobs.webp` and `coffee-lettering.webp` (from specialtyCoffeeMarket); phone screens in code
