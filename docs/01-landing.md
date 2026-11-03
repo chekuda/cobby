@@ -49,7 +49,7 @@ The landing page does **not** need the app to work. It shows the idea and collec
 | # | Section | Audience | Content |
 |---|---|---|---|
 | 1 | **Menu** | Both | Text logo "cobby", links (How it works · Brew · For coffee shops · FAQ), ES / EN switch, "Bring Cobby to your shop" button (plum) |
-| 2 | **Hero** | Both | "Early access" tag. Main promise (e.g. EN "Snap your bag. Brew it better. Find your next favorite." / ES "Haz una foto a tu café. Prepáralo mejor. Descubre tu próximo favorito."). A phone mockup built in code shows the app's tasting share card (dark, as in the app). Main button for coffee shops (plum), secondary ghost link for buyers' early access |
+| 2 | **Hero** | Both | "Early access" tag. Main promise (e.g. EN "Snap your bag. Brew it better. Find your next favorite." / ES "Guarda tu café. Prepáralo mejor." since Q46). A phone mockup built in code shows the app's tasting share card (dark, as in the app). Main button for coffee shops (plum), secondary ghost link for buyers' early access |
 | 3 | **How it works** | Buyers | 3 steps: **Snap** the bag and find the coffee in the shop or type it in → **Save** to "My coffees" → **Brew** with a guided recipe. **"Cobby reads" the label is out until the app does it** (grill round 6, Q45; to-do in [04-grilling.md](04-grilling.md) "Later") |
 | 4 | **Save your coffees** | Buyers | Your personal coffee shelf: every bag with photo, notes, roast date and your rating |
 | 5 | **Brew better** | Buyers | Ratio calculator and step-by-step timer for V60, AeroPress, French press and espresso. Includes a **small working calculator** right on the page |

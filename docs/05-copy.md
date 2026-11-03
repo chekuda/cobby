@@ -17,7 +17,7 @@
 | | ES | EN |
 |---|---|---|
 | Tag | Acceso anticipado | Early access |
-| Headline | Haz una foto a tu café. Prepáralo mejor. | Snap your bag. Brew it better. |
+| Headline | Guarda tu café. Prepáralo mejor. (owner, 2026-11-03, Q46; was "Haz una foto a tu café. Prepáralo mejor.") | Snap your bag. Brew it better. |
 | Subtitle | Cobby guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita. | Cobby keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop. |
 | Subtitle with label reading (back when the app reads labels, Q45) | Cobby lee la bolsa, guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita. | Cobby reads the bag, keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop. |
 | Main button (plum) | Lleva Cobby a tu tienda | Bring Cobby to your shop |
