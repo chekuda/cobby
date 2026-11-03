@@ -1,16 +1,17 @@
-import { BookmarkPlus, Camera, ScanText, Timer } from "lucide-react"
+import { BookmarkPlus, Camera, Timer } from "lucide-react"
 
 import { IconTile, Section, SectionTitle } from "@/components/section"
 import type { Dictionary } from "@/dictionaries"
 
-const icons = [Camera, ScanText, BookmarkPlus, Timer]
+const icons = [Camera, BookmarkPlus, Timer]
 
-// Section 3 (docs/01-landing.md): the four steps from bag to cup
+// Section 3 (docs/01-landing.md): the three steps from bag to cup. "Cobby
+// reads the label" comes back when the app does it (grill round 6, Q45)
 export function HowItWorks({ dict }: { dict: Dictionary["howItWorks"] }) {
   return (
     <Section id="how-it-works">
       <SectionTitle>{dict.title}</SectionTitle>
-      <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <ol className="mt-8 grid gap-4 sm:grid-cols-3">
         {dict.steps.map((step, i) => {
           const Icon = icons[i]
           return (

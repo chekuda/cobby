@@ -18,20 +18,22 @@
 |---|---|---|
 | Tag | Acceso anticipado | Early access |
 | Headline | Haz una foto a tu café. Prepáralo mejor. | Snap your bag. Brew it better. |
-| Subtitle | Cobby lee la bolsa, guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita. | Cobby reads the bag, keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop. |
+| Subtitle | Cobby guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita. | Cobby keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop. |
+| Subtitle with label reading (back when the app reads labels, Q45) | Cobby lee la bolsa, guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita. | Cobby reads the bag, keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop. |
 | Main button (plum) | Lleva Cobby a tu tienda | Bring Cobby to your shop |
 | Secondary link | Quiero probarlo → | I want to try it → |
 | Small note | Funciona en el navegador del móvil. Sin descargas. | Works in your phone's browser. Nothing to download. |
 
 ## 3. How it works
 
-**ES:** Cuatro pasos, de la bolsa a la taza
-**EN:** Four steps, from bag to cup
+**ES:** Tres pasos, de la bolsa a la taza
+**EN:** Three steps, from bag to cup (four when label reading comes back, Q45)
 
 | Step | ES | EN |
 |---|---|---|
-| 1 | **Haz la foto.** Apunta a la etiqueta de la bolsa. Vale cualquier tostador. | **Snap it.** Point at the bag's label. Any roaster works. |
-| 2 | **Cobby la lee.** Saca el nombre, el origen, el proceso y las notas de cata. Si algo no cuadra, lo corriges. | **Cobby reads it.** It picks out the name, origin, process and tasting notes. If something's off, you fix it. |
+| 1 | **Haz la foto.** Hazle una foto a la bolsa y busca el café en la tienda o escribe sus datos. Vale cualquier tostador. | **Snap it.** Take a photo of the bag, then find the coffee in the shop or type in its details. Any roaster works. |
+| 1, with label reading (later) | **Haz la foto.** Apunta a la etiqueta de la bolsa. Vale cualquier tostador. | **Snap it.** Point at the bag's label. Any roaster works. |
+| 2, later (Q45) | **Cobby la lee.** Saca el nombre, el origen, el proceso y las notas de cata. Si algo no cuadra, lo corriges. | **Cobby reads it.** It picks out the name, origin, process and tasting notes. If something's off, you fix it. |
 | 3 | **Guárdalo.** Cada café queda en tu estantería, con su foto y sus notas. | **Save it.** Every coffee lands on your shelf, with its photo and notes. |
 | 4 | **Prepáralo.** Elige método y tazas. Cobby te da la receta y el temporizador. | **Brew it.** Pick a method and cups. Cobby gives you the recipe and the timer. |
 
@@ -88,7 +90,7 @@
 
 | ES | EN |
 |---|---|
-| **¿Qué bolsas funcionan?** Cualquier bolsa con la etiqueta impresa. Funciona mejor con café de especialidad, que suele indicar el origen y las notas. | **Which bags work?** Any bag with a printed label. It works best with specialty coffee, which usually lists origin and notes. |
+| *Later (Q45):* **¿Qué bolsas funcionan?** Cualquier bolsa con la etiqueta impresa. Funciona mejor con café de especialidad, que suele indicar el origen y las notas. | **Which bags work?** Any bag with a printed label. It works best with specialty coffee, which usually lists origin and notes. |
 | **¿Dónde se guardan mis cafés?** En tu móvil, dentro del navegador. No necesitas cuenta. | **Where are my coffees saved?** On your phone, in the browser. You don't need an account. |
 | **¿Cuesta algo?** Es gratis para los amantes del café. | **Does it cost anything?** It's free for coffee lovers. |
 | **¿Tengo que descargar algo?** No. Funciona en el navegador del móvil y puedes añadirlo a tu pantalla de inicio. | **Do I need to download anything?** No. It works in your phone's browser, and you can add it to your home screen. |

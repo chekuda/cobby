@@ -8,7 +8,7 @@ const es = {
   meta: {
     title: "Cobby · Haz una foto a tu café. Prepáralo mejor.",
     description:
-      "Cobby lee la bolsa, guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita.",
+      "Cobby guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita.",
   },
   header: {
     homeLabel: "Cobby, inicio",
@@ -26,7 +26,7 @@ const es = {
     tag: "Acceso anticipado",
     title: "Haz una foto a tu café. Prepáralo mejor.",
     subtitle:
-      "Cobby lee la bolsa, guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita.",
+      "Cobby guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita.",
     primary: "Lleva Cobby a tu tienda",
     secondary: "Quiero probarlo",
     note: "Funciona en el navegador del móvil. Sin descargas.",
@@ -51,15 +51,12 @@ const es = {
     notes: ["Jazmín", "Melocotón", "Bergamota"],
   },
   howItWorks: {
-    title: "Cuatro pasos, de la bolsa a la taza",
+    title: "Tres pasos, de la bolsa a la taza",
+    // "Cobby reads the label" is out until the app reads labels (grill round 6, Q45)
     steps: [
       {
         title: "Haz la foto",
-        text: "Apunta a la etiqueta de la bolsa. Vale cualquier tostador.",
-      },
-      {
-        title: "Cobby la lee",
-        text: "Saca el nombre, el origen, el proceso y las notas de cata. Si algo no cuadra, lo corriges.",
+        text: "Hazle una foto a la bolsa y busca el café en la tienda o escribe sus datos. Vale cualquier tostador.",
       },
       {
         title: "Guárdalo",
@@ -152,10 +149,6 @@ const es = {
   faq: {
     title: "Preguntas frecuentes",
     items: [
-      {
-        q: "¿Qué bolsas funcionan?",
-        a: "Cualquier bolsa con la etiqueta impresa. Funciona mejor con café de especialidad, que suele indicar el origen y las notas.",
-      },
       {
         q: "¿Dónde se guardan mis cafés?",
         a: "En tu móvil, dentro del navegador. No necesitas cuenta.",

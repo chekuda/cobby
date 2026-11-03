@@ -12,7 +12,7 @@ Cobby helps coffee lovers **keep track of the coffees they buy, brew them better
 ### What the landing page has
 
 - **Hero:** "Haz una foto a tu café. Prepáralo mejor." on a warm blob background, with a phone built in code showing the app's tasting share card in the app's dark look.
-- **How it works** (four steps), **your coffee shelf**, and **Brew better** with a **working ratio calculator** (V60, AeroPress, French press, espresso).
+- **How it works** (three steps; "Cobby reads the label" comes back when the app does it), **your coffee shelf**, and **Brew better** with a **working ratio calculator** (V60, AeroPress, French press, espresso).
 - **Similar coffees**, linking to the shop (specialtyCoffeeMarket by default), with the flavor families as stickers.
 - **Meet Cobby:** the mascot, winking, and his five faces (1 to 5 stars).
 - **For coffee shops** on a plum band: the real benefits, "coming later" insights, and a founding-partners call to action (no prices).

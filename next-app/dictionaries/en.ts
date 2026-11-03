@@ -8,7 +8,7 @@ const en: Dictionary = {
   meta: {
     title: "Cobby · Snap your bag. Brew it better.",
     description:
-      "Cobby reads the bag, keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop.",
+      "Cobby keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop.",
   },
   header: {
     homeLabel: "Cobby, home",
@@ -26,7 +26,7 @@ const en: Dictionary = {
     tag: "Early access",
     title: "Snap your bag. Brew it better.",
     subtitle:
-      "Cobby reads the bag, keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop.",
+      "Cobby keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop.",
     primary: "Bring Cobby to your shop",
     secondary: "I want to try it",
     note: "Works in your phone's browser. Nothing to download.",
@@ -50,12 +50,11 @@ const en: Dictionary = {
     notes: ["Jasmine", "Peach", "Bergamot"],
   },
   howItWorks: {
-    title: "Four steps, from bag to cup",
+    title: "Three steps, from bag to cup",
     steps: [
-      { title: "Snap it", text: "Point at the bag's label. Any roaster works." },
       {
-        title: "Cobby reads it",
-        text: "It picks out the name, origin, process and tasting notes. If something's off, you fix it.",
+        title: "Snap it",
+        text: "Take a photo of the bag, then find the coffee in the shop or type in its details. Any roaster works.",
       },
       {
         title: "Save it",
@@ -145,10 +144,6 @@ const en: Dictionary = {
   faq: {
     title: "Frequently asked questions",
     items: [
-      {
-        q: "Which bags work?",
-        a: "Any bag with a printed label. It works best with specialty coffee, which usually lists origin and notes.",
-      },
       {
         q: "Where are my coffees saved?",
         a: "On your phone, in the browser. You don't need an account.",
