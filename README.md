@@ -12,7 +12,8 @@ Cobby helps coffee lovers **keep track of the coffees they buy, brew them better
 ### What the landing page has
 
 - **Hero:** "Guarda tu café. Prepáralo mejor." ("Snap your bag. Brew it better." in English) on a warm blob background, with a phone built in code showing the app's tasting share card in the app's dark look.
-- **How it works** (three steps; "Cobby reads the label" comes back when the app does it), **your coffee shelf**, and **Brew better** with a **working ratio calculator** (V60, AeroPress, French press, espresso).
+- **How it works** (three steps; "Cobby reads the label" comes back when the app does it), **your coffee shelf**, and **Brew better** (seven methods in the app) with a working **"Tune it to my taste" demo**: change grams, water, temperature or grinder clicks and see "your version". The guided timer is marked "Coming soon".
+- **Everything inside:** cards with what the beta already does (recipes your way, coffees for you, prices and buying, challenges and missions, stickers, invite a friend, story cards, notices).
 - **Similar coffees**, linking to the shop (specialtyCoffeeMarket by default), with the flavor families as stickers.
 - **Meet Cobby:** the mascot, winking, and his five faces (1 to 5 stars).
 - **For coffee shops** on a plum band: the real benefits, "coming later" insights, and a founding-partners call to action (no prices).
@@ -37,7 +38,7 @@ Cobby helps coffee lovers **keep track of the coffees they buy, brew them better
 2. You **take a photo of the bag** with Cobby.
 3. Cobby **reads the label**: roaster, coffee name, origin, process, variety and tasting notes.
 4. The coffee is **saved to "My coffees"**, your personal coffee shelf.
-5. Cobby **helps you brew it**: ratio calculator plus a step-by-step timer for your method.
+5. Cobby **helps you brew it**: a recipe for your method that you can tune to your taste (a step-by-step timer is coming).
 6. You **rate the cup**, and Cobby learns what you like.
 7. Cobby **suggests similar coffees** on the website of the coffee shop that offers Cobby.
 
@@ -52,7 +53,7 @@ All decisions came out of four "grill-me" rounds (32 questions): [docs/04-grilli
 
 - **Two languages:** Spanish and English, each at its own address (`/es`, `/en`). Spanish is the default.
 - **Generic product, with specialtyCoffeeMarket as the default:** the shop's name, logo and links live in **one file**, `next-app/config/shop.ts`. Another coffee shop only edits that file. The colors are the same for every shop.
-- **Honest:** "Early access" tag, works in the phone's browser (no App Store), no prices for shops, **no fake proof** (no invented testimonials, logos or numbers).
+- **Honest:** "Private beta" tag, only what the app does today, works in the phone's browser (no App Store), no prices for shops, **no fake proof** (no invented testimonials, logos or numbers).
 - **Forms → Google Sheet** through a Google Apps Script. Its address is a secret (`FORMS_WEBHOOK_URL`), never in the code.
 - **Privacy:** consent checkbox on both forms, privacy and legal pages, cookie-free analytics, so no cookie banner.
 - **Hosting:** Vercel Hobby (free) for the demo, on the `.vercel.app` address; move to Netlify free or a paid plan when it becomes commercial.

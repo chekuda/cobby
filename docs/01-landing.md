@@ -12,12 +12,12 @@ The landing page does **not** need the app to work. It shows the idea and collec
 ## Decisions (grill round 1, see [04-grilling.md](04-grilling.md))
 
 - **Main conversion: coffee-shop contact.** The hero tells the buyers' story, but the main goal is getting coffee shops to get in touch (they're who pay). Buyer early-access signups are secondary.
-- **Honest status:** an **"Early access"** tag. No button or text suggests the app can be used today.
+- **Honest status:** a **"Private beta"** tag since grill round 7 (was "Early access"). The landing only claims what the app does today; upcoming things are marked "Coming soon".
 - **Web app:** described as working in the phone's browser ("Works on your phone, no download needed"). **No mention of the App Store or Google Play.**
 - **Target buyer:** a home brewer in **Spain** who buys specialty coffee bags online. English serves foreigners in Spain and future markets.
 - **What shops get:** only the real phase 2 benefits: **their brand, "similar coffees" linking to their shop, customers coming back to buy again.** Customer taste insights appear under a small **"coming later"** label.
 - **No prices.** Shops see "Founding partners: talk to us".
-- **Live demo:** a small **working ratio calculator** in "Brew better".
+- **Live demo:** a small working **"Tune it to my taste" demo** in "Brew better" (was a ratio calculator until grill round 7).
 - **Logo for now:** text logo "cobby" in Inter 600 with a sage dot (see [03-design.md](03-design.md)).
 - **Images:** phone screens are **mockups built in code**; specialtyCoffeeMarket bag photos come later. Since grill round 6 the phone shows the app's tasting share card in the app's dark look.
 - **Hosting: Vercel.**
@@ -49,15 +49,16 @@ The landing page does **not** need the app to work. It shows the idea and collec
 | # | Section | Audience | Content |
 |---|---|---|---|
 | 1 | **Menu** | Both | Text logo "cobby", links (How it works · Brew · For coffee shops · FAQ), ES / EN switch, "Bring Cobby to your shop" button (plum) |
-| 2 | **Hero** | Both | "Early access" tag. Main promise (e.g. EN "Snap your bag. Brew it better. Find your next favorite." / ES "Guarda tu café. Prepáralo mejor." since Q46). A phone mockup built in code shows the app's tasting share card (dark, as in the app). Main button for coffee shops (plum), secondary ghost link for buyers' early access |
+| 2 | **Hero** | Both | "Private beta" tag (Q55). Main promise (e.g. EN "Snap your bag. Brew it better. Find your next favorite." / ES "Guarda tu café. Prepáralo mejor." since Q46). A phone mockup built in code shows the app's tasting share card (dark, as in the app). Main button for coffee shops (plum), secondary ghost link for buyers' early access |
 | 3 | **How it works** | Buyers | 3 steps: **Snap** the bag and find the coffee in the shop or type it in → **Save** to "My coffees" → **Brew** with a guided recipe. **"Cobby reads" the label is out until the app does it** (grill round 6, Q45; to-do in [04-grilling.md](04-grilling.md) "Later") |
 | 4 | **Save your coffees** | Buyers | Your personal coffee shelf: every bag with photo, notes, roast date and your rating |
-| 5 | **Brew better** | Buyers | Ratio calculator and step-by-step timer for V60, AeroPress, French press and espresso. Includes a **small working calculator** right on the page |
+| 5 | **Brew better** | Buyers | Recipes for seven methods, "Tune it to my taste" with grinder clicks, Cobby's tips; the guided timer marked **"Coming soon"** (Q53). A working **"Tune it to my taste" demo** (Q52) |
 | 6 | **Find similar coffees** | Buyers | Cobby learns your taste (fruity, chocolatey, floral…) and suggests similar coffees in the shop |
 | 6b | **Meet Cobby** (grill round 6) | Buyers | Cobby, the owner's character, big and winking on a sage disc, and his five faces with the rating each stands for (1 to 5 stars) |
+| 6c | **Everything inside** (grill round 7) | Buyers | Cream band, eight cards with icon and text: recipes your way, coffees for you, prices and buying, challenges and missions, stickers, invite a friend, story cards, notices. Prizes stay general, no figures (Q50) |
 | 7 | **For coffee shops** | Shops | Your brand on the app · "similar coffees" from *your* catalog · customers come back to reorder · works next to any online store. "Coming later": learn what your customers like. "Founding partners: talk to us", no prices |
 | 8 | **FAQ** | Both | Where are my coffees saved? ("Which bags work?" is out until the app reads labels, Q45) Does it cost anything? Which languages? Do I need to download anything? (No, it works in the browser) |
-| 9 | **Call to action** | Both | Main: "Bring Cobby to your shop" (coffee shops). Secondary: "Get early access" (buyers), and under it the app's **private beta**: a QR to open it on the phone (computers) or an "Open the app" button (phones) |
+| 9 | **Call to action** | Both | Main: "Bring Cobby to your shop" (coffee shops). Secondary: "Ask for access" to the private beta (buyers), and under it the app's **private beta**: a QR to open it on the phone (computers) or an "Open the app" button (phones) |
 | 10 | **Footer** | Both | Logo, short description, language switch, contact, links to the privacy policy and legal notice |
 | — | **Legal pages** | Both | Privacy policy and legal notice, ES and EN, details from the legal config |
 
@@ -138,7 +139,7 @@ Section anchors (same in both languages): `#how-it-works`, `#brew`, `#for-shops`
 
 | File (in `next-app/`) | What it does |
 |---|---|
-| `components/hero.tsx` | The hero: "Early access" tag, headline, subtitle, plum button "Bring Cobby to your shop" (→ `#contact`), link "I want to try it" with an arrow in a sage dot (→ `#early-access`), and the "works in the browser" note. Text on the left, phone on the right on desktop; stacked on phones |
+| `components/hero.tsx` | The hero: "Private beta" tag (was "Early access" until grill round 7), headline, subtitle, plum button "Bring Cobby to your shop" (→ `#contact`), link "I want to try it" with an arrow in a sage dot (→ `#early-access`), and the "works in the browser" note. Text on the left, phone on the right on desktop; stacked on phones |
 | `components/phone-mockup.tsx` | A phone built in code showing a saved coffee's card: bag drawing, name, origin and process, tasting-note chips, roast date, rating, "Brew it" button and "Similar at {shopName}" |
 | `lib/text.ts` | `fill()`: fills `{shopName}`-style placeholders in dictionary texts |
 | `dictionaries/*.ts` | New `hero` and `mockup` texts |
@@ -156,7 +157,7 @@ Section anchors (same in both languages): `#how-it-works`, `#brew`, `#for-shops`
 | `components/section.tsx` | Shared band (Paper or Fog, 1200px column), section title, and the 1–5 rating dots |
 | `components/how-it-works.tsx` | Section 3: four step cards (Fog band) |
 | `components/shelf.tsx` | Section 4: text + a shelf of three example coffees built in code |
-| `components/brew-section.tsx`, `components/ratio-calculator.tsx`, `lib/recipes.ts` | Section 5: text + the working calculator (method, cups or shots → coffee, water or drink weight, temperature, grind). The selected method is sage. V60 up to 4 cups, AeroPress 2, French press 6, espresso 2 shots |
+| `components/brew-section.tsx`, `components/tune-demo.tsx` (was `ratio-calculator.tsx` until grill round 7), `lib/recipes.ts` | Section 5: text + the demo (see "How grill round 7 works"). The selected method is sage. V60 up to 4 cups, AeroPress 2, French press 6, espresso 2 shots |
 | `components/similar.tsx` | Section 6: text + link to the shop's page (`shopUrl`, opens in a new tab) |
 | `components/for-shops.tsx` | Section 7: four benefits, "Coming later" insights, how the shop's name appears, and the founding-partners box (sage) with the plum button, on the plum band with the drifting "coffee" lettering (→ `#contact`) |
 | `components/faq.tsx` | Section 8: questions that open and close (native `<details>`, no JavaScript) |
@@ -185,6 +186,18 @@ Decisions: [04-grilling.md](04-grilling.md), round 6 (Q37–Q44).
 | `config/shop.ts` | New `appUrl` (`https://app.specialtycoffeemarket.es`) |
 | `lib/flavors.ts`, `components/section.tsx` (`Sticker`) | Flavor families and their sticker colors; the sticker pill. Used on the hero tag, the shelf (one family per coffee), "Find similar coffees" (all five families) and the phone |
 | `app/[lang]/layout.tsx`, `app/globals.css` | Archivo for `h1` / `h2`, sticker and phone colors, springy press, Cobby's wink and sway |
+
+## How grill round 7 works (2026-11-06)
+
+Decisions: [04-grilling.md](04-grilling.md), round 7 (Q47–Q56). The landing now says what the app does (feature list: `cobby-app/docs/05-features.md`).
+
+| File (in `next-app/`) | What it does |
+|---|---|
+| `components/tune-demo.tsx` | The "Tune it to my taste" demo: pick a method; for 1 cup (or 1 shot) change coffee g, water ml (espresso: g in the cup), temperature and grinder clicks (empty until set, then from 20). Any change shows the honey **"Your version"** sticker and "Back to the original recipe"; the ratio and "stronger / milder than the base recipe" update live. Only in the browser, nothing saved |
+| `components/brew-section.tsx` | Seven methods in the text, and the guided timer with a sage **"Coming soon"** sticker |
+| `components/app-highlights.tsx` | "Everything inside": eight cards (icon tile, title, text), on cream after "Meet Cobby" |
+| `components/for-shops.tsx` | New "Tools to sell more": monthly challenge, missions with a prize, invite a friend, notices, what your customers like, sales you can see. "Coming later" is now a shop dashboard (the ranking already exists) |
+| `dictionaries/*.ts` | "Private beta" tag, ask-for-access form, shelf and FAQ say sign-in by email code and EU servers (not "on your phone, no account"), privacy and legal notice lines updated to the beta |
 
 ## Still to define in the workshop
 

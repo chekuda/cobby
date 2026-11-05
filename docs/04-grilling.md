@@ -88,6 +88,23 @@ Context: the app (`~/Desktop/me/code/cobby-app`, live at `https://app.specialtyc
 | Q45 | **"Cobby reads the label" (2026-11-03, after the build).** The app doesn't read labels yet (AI label reading moved to the app's v2) | **Owner: take it out of the landing for now** and keep it as a to-do. Gone: step 2 of "How it works" (now three steps; step 1 says to photograph the bag and find the coffee in the shop or type it in), "Cobby reads the bag" in the hero subtitle and the page description, and the FAQ "Which bags work?". The headline "Snap your bag. Brew it better." stays (the app does save a photo of the bag) |
 | Q44 | **The app is a private friends test.** Public QR now ("try it"), QR only when the app opens, or QR now with an honest "private beta, ask for access" text? | **Owner: QR now with an honest text** ("private beta, ask for access") |
 
+## Round 7: the landing catches up with the app (2026-11-06), answered and built
+
+Context: by 2026-11-06 the app (`cobby-app`, feature list in its `docs/05-features.md`) has recipes tuned to you, recommendations from the shop's catalog, prices with "Buy at …", stickers, a monthly challenge, missions with a coupon, invite a friend, share cards, "Your month in coffee" and push notices. The landing showed none of that, and it said three things that are no longer true: coffees saved "on your phone, without an account", a guided "timer", and recipes for 4 methods (the app has 7). Open questions, no recommended answer.
+
+| # | Question | Decision |
+|---|---|---|
+| Q47 | **Scope.** Fix what's untrue and add a new section with the highlights, rebuild the buyer part around the app's tabs, or only fix what's untrue | **Owner: fix what's untrue and add a new section** |
+| Q48 | **What to highlight** | Not answered by number; taken from the owner's request: **recipes tuned to you, recommended coffees, prices and buying, challenges "and the rest"** (missions, stickers, invite a friend, share cards, month recap, notices) |
+| Q49 | **"Prices"** | **Owner: the coffees' prices and buying them** (the app shows the shop's price and bag size and "Buy at {shopName}"). The "no prices for shops" rule stays |
+| Q50 | **Prizes and discounts.** Concrete ("discount coupon at {shopName}") or general | **Owner: general** ("prizes from the shop"), and no invented figures |
+| Q51 | **How to show it.** More dark phones built in code, cards with icon and text, or screenshots | **Owner: cards with icon and text**, like "How it works" |
+| Q52 | **The landing's calculator.** Keep it, extend it to 7 methods, or turn it into a "Tune it to my taste" demo | **Owner: a "Tune it to my taste" demo** |
+| Q53 | **The guided timer** (not in the app yet) | **Owner: keep it, marked "Coming soon"** |
+| Q54 | **For coffee shops** | **Owner: add the sales levers** (missions, challenge, invite a friend, notices, community ranking, cookie-free stats) |
+| Q55 | **Status** | **Owner: "Private beta"** across the page, not "Early access" |
+| Q56 | **Texts** | **Owner: written straight into the page** (ES and EN) and reviewed in the browser; `05-copy.md` updated after |
+
 ## Status
 
 **Landing page (phase 1): description done**, 32 decisions over 4 rounds. Waiting for the user to confirm the shared understanding before building step 1.

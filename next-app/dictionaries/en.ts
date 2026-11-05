@@ -23,7 +23,7 @@ const en: Dictionary = {
     languageLabel: "Language",
   },
   hero: {
-    tag: "Early access",
+    tag: "Private beta",
     title: "Snap your bag. Brew it better.",
     subtitle:
       "Cobby keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop.",
@@ -62,13 +62,13 @@ const en: Dictionary = {
       },
       {
         title: "Brew it",
-        text: "Pick a method and cups. Cobby gives you the recipe and the timer.",
+        text: "Pick a method and cups. Cobby gives you the recipe, and you tune it to your taste.",
       },
     ],
   },
   shelf: {
     title: "Your coffee shelf",
-    text: "Every coffee you've tried, in one place: the bag photo, origin, notes, roast date and your rating. Saved on your phone, with no account or password.",
+    text: "Every coffee you've tried, in one place: the bag photo, origin, notes, roast date and your rating. You sign in with a code sent to your email, no password, and your coffees are kept on servers in the European Union.",
     // Example coffees for the illustration
     label: "Example of the coffee shelf in Cobby",
     items: [
@@ -79,14 +79,25 @@ const en: Dictionary = {
   },
   brew: {
     title: "Brew it better",
-    text: "Recipes for V60, AeroPress, French press and espresso, with a timer that guides every pour. Then rate the cup, and Cobby tells you what to adjust next time.",
+    text: "Recipes for seven methods: V60, Chemex, AeroPress, French press, espresso, moka pot and cold brew. With “Tune it to my taste” you keep your own version for each coffee, down to your grinder's clicks. And after every cup, Cobby suggests what to change.",
+    soonTag: "Coming soon",
+    soon: "A timer that guides you pour by pour.",
     calculator: {
-      label: "Try it",
+      label: "Try it: tune it to your taste",
       method: "Method",
-      cups: "Cups",
-      shots: "Shots",
-      fewer: "One less",
-      more: "One more",
+      perCup: "For 1 cup",
+      perShot: "For 1 shot",
+      base: "Base recipe",
+      yours: "Your version",
+      reset: "Back to the original recipe",
+      lower: "Lower: {label}",
+      raise: "Raise: {label}",
+      clicks: "Your grinder's clicks",
+      ratio: "Ratio",
+      stronger: "Stronger than the base recipe",
+      milder: "Milder than the base recipe",
+      same: "As strong as the base recipe",
+      note: "This is how “Tune it to my taste” works in the app: your version is saved for that coffee, and Cobby never touches your numbers.",
       coffee: "Coffee",
       water: "Water",
       yield: "In the cup",
@@ -120,6 +131,44 @@ const en: Dictionary = {
     faces: ["Meh", "Oh!", "Nice", "Like it", "Love it!"],
     stars: "{n} out of 5 stars",
   },
+  highlights: {
+    title: "Everything inside",
+    lead: "What already works in the beta, on top of saving and brewing your coffees.",
+    items: [
+      {
+        title: "Recipes your way",
+        text: "Tune the grams, water, temperature and your grinder's clicks. Cobby keeps your version for each coffee.",
+      },
+      {
+        title: "Coffees for you",
+        text: "Your flavor profile, and coffees like the ones you love from the {shopName} catalog.",
+      },
+      {
+        title: "Prices up front",
+        text: "Every shop coffee with its price and bag size, and a button to buy it at {shopName}.",
+      },
+      {
+        title: "Challenges and missions",
+        text: "A new challenge every month, and missions with prizes from the shop.",
+      },
+      {
+        title: "Stickers",
+        text: "They come on their own from what you log: your first coffee, new origins, every brew method…",
+      },
+      {
+        title: "Invite a friend",
+        text: "Share your link, and when your friend logs their first tasting, you both get a prize.",
+      },
+      {
+        title: "Made for stories",
+        text: "Cards of your tastings, your recipes and your month in coffee, ready to share.",
+      },
+      {
+        title: "Notices that matter",
+        text: "Only if you want them: new missions or a prize about to expire. Four a month at most.",
+      },
+    ],
+  },
   shops: {
     title: "For coffee shops and roasters",
     lead: "Give your customers a way to enjoy your coffee more, and to come back for more.",
@@ -136,7 +185,34 @@ const en: Dictionary = {
       },
     ],
     comingLaterTag: "Coming later",
-    comingLater: "Which flavors and origins your customers prefer.",
+    comingLater: "A dashboard for your shop, with your catalog and your customers.",
+    leversTitle: "Tools to sell more",
+    levers: [
+      {
+        title: "Challenge of the month",
+        text: "Pick a coffee, an origin or a process each month and push what you want to sell.",
+      },
+      {
+        title: "Missions with a prize",
+        text: "Your customers complete missions in the app and earn a prize for their next order.",
+      },
+      {
+        title: "Invite a friend",
+        text: "Each customer can bring another one, with a prize for both.",
+      },
+      {
+        title: "Notices that bring them back",
+        text: "Cobby reminds each customer of their monthly prizes, only if they turned notices on, at no cost per notice.",
+      },
+      {
+        title: "What your customers like",
+        text: "Which coffees, origins and processes score best, from real ratings.",
+      },
+      {
+        title: "Sales you can see",
+        text: "Buy buttons reach your shop tagged, and the stats use no cookies.",
+      },
+    ],
     foundingPartners: "We're looking for founding partner shops. Let's talk.",
     cta: "Bring Cobby to your shop",
     example: "Here's how it looks with {shopName}.",
@@ -146,7 +222,7 @@ const en: Dictionary = {
     items: [
       {
         q: "Where are my coffees saved?",
-        a: "On your phone, in the browser. You don't need an account.",
+        a: "In your account, on servers in the European Union. You sign in with a code sent to your email, no password, and you can download your data or delete your account whenever you like.",
       },
       { q: "Does it cost anything?", a: "It's free for coffee lovers." },
       {
@@ -156,7 +232,7 @@ const en: Dictionary = {
       { q: "Which languages?", a: "Spanish and English." },
       {
         q: "When can I use it?",
-        a: "We're in early access. Leave your email and we'll let you know.",
+        a: "It's in a private beta with a small group right now. Leave your email and we'll give you access.",
       },
     ],
   },
@@ -182,11 +258,11 @@ const en: Dictionary = {
       success: "Thanks! We'll be in touch soon.",
     },
     buyer: {
-      title: "Let me know when it's ready",
+      title: "Ask for beta access",
       email: "Email",
       placeholder: "you@email.com",
-      submit: "Get early access",
-      success: "You're on the list! We'll let you know.",
+      submit: "Ask for access",
+      success: "You're on the list! We'll be in touch soon.",
     },
     app: {
       tag: "Private beta",
@@ -227,7 +303,7 @@ const en: Dictionary = {
         {
           title: "What we use it for",
           paragraphs: [
-            "To reply to coffee shops that write to us, and to let you know when Cobby is available. We don't use it for anything else, and we don't sell it.",
+            "To reply to coffee shops that write to us, and to give you access to Cobby. We don't use it for anything else, and we don't sell it.",
           ],
         },
         {
@@ -269,7 +345,7 @@ const en: Dictionary = {
         {
           title: "Use of this site",
           paragraphs: [
-            "This site presents Cobby, an app in early access. The information may change while we build it.",
+            "This site presents Cobby, an app in a private beta. The information may change while we build it.",
           ],
         },
         {

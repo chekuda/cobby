@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 
+import { AppHighlights } from "@/components/app-highlights"
 import { BrewSection } from "@/components/brew-section"
 import { Contact } from "@/components/contact"
 import { Faq } from "@/components/faq"
@@ -26,6 +27,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
       <BrewSection dict={dict.brew} />
       <Similar dict={dict.similar} families={dict.families} />
       <MeetCobby dict={dict.cobby} />
+      <AppHighlights dict={dict.highlights} />
       <ForShops dict={dict.shops} />
       <Faq dict={dict.faq} />
       <Contact lang={lang} dict={dict.forms} />

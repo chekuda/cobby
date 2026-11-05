@@ -20,7 +20,7 @@ From darker to lighter:
 | Sand | `#CFBEB4` | `sand` | Borders and dividers, empty rating dots, big step numbers, text on the plum band |
 | Cream | `#ECE7E3` | `cream` | Alternating section backgrounds, the calculator card |
 | Paper | `#FFFFFF` | `paper` | Page background, cards, inputs |
-| Sage | `#CACE91` | `sage` | **The colorful accent:** "Early access" tag, icon tiles, tasting-note chips, the selected calculator method, the form success message, arrow dots, the logo dot, the founding-partners box, the disc behind the hero phone |
+| Sage | `#CACE91` | `sage` | **The colorful accent:** "Private beta" and "Coming soon" stickers, icon tiles, tasting-note chips, the selected calculator method, the form success message, arrow dots, the logo dot, the founding-partners box, the disc behind the hero phone |
 
 **From the app (grill round 6, 2026-11-03).** Touches of the app's "dark urban" look, used on the cream landing:
 
@@ -45,7 +45,7 @@ shadcn tokens: `primary` = plum (white text), `secondary` = sage, `muted` / `acc
 
 - **Plum is the main action** (filled button with white text). On the plum band, the main box is sage with a plum button.
 - **Sage is for fills, not text** on light backgrounds.
-- Section rhythm, top to bottom: hero (cream with blobs) → white → cream → white → cream → white (Meet Cobby) → **plum** → white → cream → **plum footer**.
+- Section rhythm, top to bottom: hero (cream with blobs) → white → cream → white → cream → white (Meet Cobby) → cream (Everything inside) → **plum** → white → cream → **plum footer**.
 - Error messages keep shadcn's red (`destructive`).
 
 ## Images
@@ -120,7 +120,7 @@ Keep motion subtle: nothing loops fast, nothing blocks reading, and the page mus
 | **Primary button** | Plum fill, white text, 12px, Inter 600 (`buttonVariants()` + `lift`) |
 | **Secondary link** | Plum text + arrow inside a sage dot (`ArrowDot`) |
 | **Outline button** | Plum border, plum text (buyer form) |
-| **Sticker** | Colored pill, plum outline at 55 %, plum text, a little crooked. Sage for status ("Early access", "Private beta"), flavor colors for flavor families and tasting notes |
+| **Sticker** | Colored pill, plum outline at 55 %, plum text, a little crooked. Sage for status ("Private beta", "Coming soon"), honey for "Your version" in the tune demo, flavor colors for flavor families and tasting notes |
 | **Cobby** | The owner's character (`components/cobby.tsx`, drawn from the app's copy of his SVGs). On light bands: hair stone, face plum; in the dark phone: hair smoke, face foam. Five faces = 1 to 5 stars (meh, surprised, content, wink, delighted) |
 | **QR** | Plum modules on white, 12px corners, made at build time (`qrcode` library, inline SVG) |
 | **Icon tile** | Sage square, plum icon (`IconTile`) |

@@ -1,4 +1,16 @@
-import { ArrowRight, Link2, Puzzle, Repeat, Store } from "lucide-react"
+import {
+  ArrowRight,
+  BarChart3,
+  Bell,
+  Gift,
+  Link2,
+  MousePointerClick,
+  Puzzle,
+  Repeat,
+  Store,
+  Target,
+  UserPlus,
+} from "lucide-react"
 import { cn } from "@/lib/utils"
 
 import { IconTile, Section, SectionTitle } from "@/components/section"
@@ -8,6 +20,8 @@ import type { Dictionary } from "@/dictionaries"
 import { fill } from "@/lib/text"
 
 const icons = [Store, Link2, Repeat, Puzzle]
+// Sales levers already in the app (grill round 7, Q54)
+const leverIcons = [Target, Gift, UserPlus, Bell, BarChart3, MousePointerClick]
 
 // Hand-lettered "coffee" (public/coffee-lettering.webp), white on transparent,
 // drifting slowly behind the plum band
@@ -22,7 +36,8 @@ function Lettering() {
 }
 
 // Section 7 (docs/01-landing.md): the pitch to coffee shops, on the plum band.
-// Only the real phase 2 benefits; insights are "coming later"; no prices.
+// Only what the app really does: the benefits and the sales levers (grill
+// round 7); a shop dashboard is "coming later"; no prices.
 export function ForShops({ dict }: { dict: Dictionary["shops"] }) {
   return (
     <Section id="for-shops" tone="plum" decoration={<Lettering />}>
@@ -51,7 +66,25 @@ export function ForShops({ dict }: { dict: Dictionary["shops"] }) {
         })}
       </ul>
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <h3 className="mt-12 text-heading-sm font-semibold text-paper">{dict.leversTitle}</h3>
+      <ul className="mt-6 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+        {dict.levers.map((lever, i) => {
+          const Icon = leverIcons[i % leverIcons.length]
+          return (
+            <li key={lever.title} className="flex gap-4">
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-paper/10 text-sage">
+                <Icon className="size-5" aria-hidden="true" />
+              </span>
+              <span className="flex flex-col gap-1">
+                <span className="text-body font-semibold text-paper">{lever.title}</span>
+                <span className="text-body-sm text-sand">{lever.text}</span>
+              </span>
+            </li>
+          )
+        })}
+      </ul>
+
+      <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="flex flex-wrap items-center gap-2 text-body-sm text-sand">
           <span className="rounded-sm bg-sage px-2 py-0.5 text-caption font-semibold text-plum">
             {dict.comingLaterTag}

@@ -164,3 +164,22 @@ These texts were needed by the page and are already in `next-app/dictionaries/`:
 | Private beta tag | Beta privada | Private beta |
 | Private beta, computers (next to the QR) | La app ya funciona con un grupo pequeño. Escanea el código para abrirla en el móvil y, si aún no tienes acceso, pídelo con tu email aquí arriba. | The app is already up and running with a small group. Scan the code to open it on your phone, and if you don't have access yet, ask for it with your email above. |
 | Private beta, phones | La app ya funciona con un grupo pequeño. Ábrela y, si aún no tienes acceso, pídelo con tu email aquí arriba. · Abrir la app | The app is already up and running with a small group. Open it, and if you don't have access yet, ask for it with your email above. · Open the app |
+
+## Changed in grill round 7 (2026-11-06)
+
+The landing now matches what the app does. Full texts in `next-app/dictionaries/es.ts` and `en.ts`; the main ones:
+
+| | ES | EN |
+|---|---|---|
+| Hero tag | Beta privada | Private beta |
+| How it works, step 3 | Elige método y tazas. Cobby te da la receta, y tú la ajustas a tu gusto. | Pick a method and cups. Cobby gives you the recipe, and you tune it to your taste. |
+| Shelf, last sentence (was "saved on your phone, no account") | Entras con un código que te llega por email, sin contraseñas, y tus cafés se guardan en servidores de la Unión Europea. | You sign in with a code sent to your email, no password, and your coffees are kept on servers in the European Union. |
+| Brew better | Recetas para siete métodos: V60, Chemex, AeroPress, prensa francesa, espresso, moka y cold brew. Con «Ajustar a mi gusto» te guardas tu propia versión para cada café, hasta con los clics de tu molino. Y después de cada taza, Cobby te sugiere qué cambiar. | Recipes for seven methods: V60, Chemex, AeroPress, French press, espresso, moka pot and cold brew. With “Tune it to my taste” you keep your own version for each coffee, down to your grinder's clicks. And after every cup, Cobby suggests what to change. |
+| Coming soon | Próximamente · Un temporizador que te guía vertido a vertido. | Coming soon · A timer that guides you pour by pour. |
+| Tune demo | Pruébalo: ajústala a tu gusto · Receta base / Tu versión · Para 1 taza · Clics de tu molino · Proporción · Más intenso / Más suave / Igual de intenso que la receta base · Volver a la receta original | Try it: tune it to your taste · Base recipe / Your version · For 1 cup · Your grinder's clicks · Ratio · Stronger / Milder / As strong as the base recipe · Back to the original recipe |
+| Everything inside | Todo lo que hay dentro · 8 cards: Recetas a tu gusto, Cafés para ti, Precio a la vista, Retos y misiones, Pegatinas, Invita a un amigo, Para tus stories, Avisos que importan | Everything inside · Recipes your way, Coffees for you, Prices up front, Challenges and missions, Stickers, Invite a friend, Made for stories, Notices that matter |
+| For shops: levers | Herramientas para vender más: Reto del mes, Misiones con premio, Invita a un amigo, Avisos que traen de vuelta, Lo que gusta a tus clientes, Ventas que se ven | Tools to sell more: Challenge of the month, Missions with a prize, Invite a friend, Notices that bring them back, What your customers like, Sales you can see |
+| For shops: coming later (the ranking already exists) | Un panel para tu tienda, con tu catálogo y tus clientes. | A dashboard for your shop, with your catalog and your customers. |
+| FAQ: where are my coffees saved | En tu cuenta, en servidores de la Unión Europea. Entras con un código… y puedes descargar tus datos o borrar tu cuenta cuando quieras. | In your account, on servers in the European Union… |
+| FAQ: when can I use it | Ahora está en beta privada con un grupo pequeño. Déjanos tu email y te damos acceso. | It's in a private beta with a small group right now. Leave your email and we'll give you access. |
+| Buyer form | Pide acceso a la beta · Pedir acceso · ¡Apuntado! Te escribimos pronto. | Ask for beta access · Ask for access · You're on the list! We'll be in touch soon. |

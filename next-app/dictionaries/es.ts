@@ -23,7 +23,7 @@ const es = {
     languageLabel: "Idioma",
   },
   hero: {
-    tag: "Acceso anticipado",
+    tag: "Beta privada",
     title: "Guarda tu café. Prepáralo mejor.",
     subtitle:
       "Cobby guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita.",
@@ -64,13 +64,13 @@ const es = {
       },
       {
         title: "Prepáralo",
-        text: "Elige método y tazas. Cobby te da la receta y el temporizador.",
+        text: "Elige método y tazas. Cobby te da la receta, y tú la ajustas a tu gusto.",
       },
     ],
   },
   shelf: {
     title: "Tu estantería de cafés",
-    text: "Todos los cafés que has probado, en un solo sitio: la foto de la bolsa, el origen, las notas, la fecha de tueste y tu puntuación. Se guardan en tu móvil, sin cuentas ni contraseñas.",
+    text: "Todos los cafés que has probado, en un solo sitio: la foto de la bolsa, el origen, las notas, la fecha de tueste y tu puntuación. Entras con un código que te llega por email, sin contraseñas, y tus cafés se guardan en servidores de la Unión Europea.",
     // Example coffees for the illustration
     label: "Ejemplo de la estantería de cafés en Cobby",
     items: [
@@ -81,14 +81,26 @@ const es = {
   },
   brew: {
     title: "Prepáralo mejor",
-    text: "Recetas para V60, AeroPress, prensa francesa y espresso, con un temporizador que te guía vertido a vertido. Después, puntúa la taza y Cobby te dice qué ajustar la próxima vez.",
+    text: "Recetas para siete métodos: V60, Chemex, AeroPress, prensa francesa, espresso, moka y cold brew. Con «Ajustar a mi gusto» te guardas tu propia versión para cada café, hasta con los clics de tu molino. Y después de cada taza, Cobby te sugiere qué cambiar.",
+    soonTag: "Próximamente",
+    soon: "Un temporizador que te guía vertido a vertido.",
+    // "Tune it to my taste" demo (grill round 7, Q52)
     calculator: {
-      label: "Pruébalo",
+      label: "Pruébalo: ajústala a tu gusto",
       method: "Método",
-      cups: "Tazas",
-      shots: "Shots",
-      fewer: "Una menos",
-      more: "Una más",
+      perCup: "Para 1 taza",
+      perShot: "Para 1 shot",
+      base: "Receta base",
+      yours: "Tu versión",
+      reset: "Volver a la receta original",
+      lower: "Bajar: {label}",
+      raise: "Subir: {label}",
+      clicks: "Clics de tu molino",
+      ratio: "Proporción",
+      stronger: "Más intenso que la receta base",
+      milder: "Más suave que la receta base",
+      same: "Igual de intenso que la receta base",
+      note: "Así funciona «Ajustar a mi gusto» en la app: tu versión se guarda para ese café y Cobby nunca toca tus números.",
       coffee: "Café",
       water: "Agua",
       yield: "En la taza",
@@ -122,6 +134,45 @@ const es = {
     faces: ["Meh", "¡Anda!", "Rico", "Me gusta", "¡Me encanta!"],
     stars: "{n} de 5 estrellas",
   },
+  // What's inside the app today (grill round 7, Q47–Q51)
+  highlights: {
+    title: "Todo lo que hay dentro",
+    lead: "Lo que ya funciona en la beta, además de guardar y preparar tus cafés.",
+    items: [
+      {
+        title: "Recetas a tu gusto",
+        text: "Ajusta gramos, agua, temperatura y los clics de tu molino. Cobby guarda tu versión para cada café.",
+      },
+      {
+        title: "Cafés para ti",
+        text: "Tu perfil de sabor y cafés parecidos a los que te gustan, del catálogo de {shopName}.",
+      },
+      {
+        title: "Precio a la vista",
+        text: "Cada café de la tienda con su precio y el tamaño de la bolsa, y un botón para comprarlo en {shopName}.",
+      },
+      {
+        title: "Retos y misiones",
+        text: "Un reto nuevo cada mes y misiones con premios de la tienda.",
+      },
+      {
+        title: "Pegatinas",
+        text: "Se consiguen solas con lo que apuntas: tu primer café, orígenes distintos, todos los métodos…",
+      },
+      {
+        title: "Invita a un amigo",
+        text: "Comparte tu enlace y, cuando tu amigo apunte su primera cata, los dos ganáis premio.",
+      },
+      {
+        title: "Para tus stories",
+        text: "Tarjetas de tus catas, tus recetas y tu mes en café, listas para compartir.",
+      },
+      {
+        title: "Avisos que importan",
+        text: "Solo si quieres: misiones nuevas o un premio a punto de caducar. Como mucho cuatro al mes.",
+      },
+    ],
+  },
   shops: {
     title: "Para tiendas y tostadores",
     lead: "Dale a tus clientes una forma de disfrutar más tu café, y de volver a por más.",
@@ -141,7 +192,35 @@ const es = {
       },
     ],
     comingLaterTag: "Próximamente",
-    comingLater: "Qué sabores y orígenes prefieren tus clientes.",
+    comingLater: "Un panel para tu tienda, con tu catálogo y tus clientes.",
+    // Sales levers already in the app (grill round 7, Q54)
+    leversTitle: "Herramientas para vender más",
+    levers: [
+      {
+        title: "Reto del mes",
+        text: "Propón un café, un origen o un proceso cada mes y empuja lo que quieres mover.",
+      },
+      {
+        title: "Misiones con premio",
+        text: "Tus clientes completan misiones en la app y ganan un premio para su próxima compra.",
+      },
+      {
+        title: "Invita a un amigo",
+        text: "Cada cliente puede traer a otro, con un premio para los dos.",
+      },
+      {
+        title: "Avisos que traen de vuelta",
+        text: "Cobby recuerda a cada cliente sus premios del mes, solo si los ha activado y sin coste por aviso.",
+      },
+      {
+        title: "Lo que gusta a tus clientes",
+        text: "Qué cafés, orígenes y procesos puntúan mejor, con notas reales.",
+      },
+      {
+        title: "Ventas que se ven",
+        text: "Los botones de compra llegan a tu tienda etiquetados, y las estadísticas no usan cookies.",
+      },
+    ],
     foundingPartners: "Buscamos tiendas socias fundadoras. Hablemos.",
     cta: "Lleva Cobby a tu tienda",
     example: "Así se vería con {shopName}.",
@@ -151,7 +230,7 @@ const es = {
     items: [
       {
         q: "¿Dónde se guardan mis cafés?",
-        a: "En tu móvil, dentro del navegador. No necesitas cuenta.",
+        a: "En tu cuenta, en servidores de la Unión Europea. Entras con un código que te llega por email, sin contraseña, y puedes descargar tus datos o borrar tu cuenta cuando quieras.",
       },
       { q: "¿Cuesta algo?", a: "Es gratis para los amantes del café." },
       {
@@ -161,7 +240,7 @@ const es = {
       { q: "¿En qué idiomas está?", a: "En español y en inglés." },
       {
         q: "¿Cuándo puedo usarlo?",
-        a: "Estamos en acceso anticipado. Déjanos tu email y te avisamos.",
+        a: "Ahora está en beta privada con un grupo pequeño. Déjanos tu email y te damos acceso.",
       },
     ],
   },
@@ -187,11 +266,11 @@ const es = {
       success: "¡Gracias! Te escribimos pronto.",
     },
     buyer: {
-      title: "Avísame cuando esté listo",
+      title: "Pide acceso a la beta",
       email: "Email",
       placeholder: "tu@email.com",
-      submit: "Quiero acceso anticipado",
-      success: "¡Apuntado! Te avisaremos.",
+      submit: "Pedir acceso",
+      success: "¡Apuntado! Te escribimos pronto.",
     },
     // The app is a private test for now (grill round 6, Q44)
     app: {
@@ -225,7 +304,7 @@ const es = {
           title: "Qué datos recogemos",
           paragraphs: [
             "Formulario de tiendas: nombre, nombre de la tienda, email y, si los das, web y mensaje.",
-            "Formulario de acceso anticipado: tu email y el idioma de la página.",
+            "Formulario de acceso a la beta: tu email y el idioma de la página.",
             "Una cookie técnica (cobby-lang) que solo recuerda el idioma que eliges.",
             "Estadísticas de visitas anónimas, sin cookies (Vercel Web Analytics).",
           ],
@@ -233,7 +312,7 @@ const es = {
         {
           title: "Para qué los usamos",
           paragraphs: [
-            "Para responder a las tiendas que nos escriben y para avisarte cuando Cobby esté disponible. No los usamos para nada más ni los vendemos.",
+            "Para responder a las tiendas que nos escriben y para darte acceso a Cobby. No los usamos para nada más ni los vendemos.",
           ],
         },
         {
@@ -275,7 +354,7 @@ const es = {
         {
           title: "Uso de esta web",
           paragraphs: [
-            "Esta web presenta Cobby, una app en acceso anticipado. La información puede cambiar mientras la desarrollamos.",
+            "Esta web presenta Cobby, una app en beta privada. La información puede cambiar mientras la desarrollamos.",
           ],
         },
         {

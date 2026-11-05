@@ -6,7 +6,7 @@
 
 | Phase | State |
 |---|---|
-| 1. **Landing page** (`next-app/`) | **Built**: every section, working ratio calculator, two forms, privacy and legal pages, ES/EN, specialtyCoffeeMarket palette, animations. All 7 build steps done; **live on Vercel Hobby at https://cobby-omega.vercel.app** (confirmed by the user 2026-11-03). **Grill round 6 (mockup in the app's new look, "Meet Cobby" section, QR to the app) in progress.** Spec: [`docs/01-landing.md`](docs/01-landing.md) |
+| 1. **Landing page** (`next-app/`) | **Built**: every section, "Tune it to my taste" demo, two forms, privacy and legal pages, ES/EN, specialtyCoffeeMarket palette, animations. All 7 build steps done; **live on Vercel Hobby at https://cobby-omega.vercel.app** (confirmed by the user 2026-11-03). **Grill round 6 (mockup in the app's new look, "Meet Cobby" section, QR to the app) in progress.** Spec: [`docs/01-landing.md`](docs/01-landing.md) |
 | 2. **The app** (photo of the bag → Ollama reads the label → "My coffees" → guided brew → rating → similar coffees) | **Not started.** Spec: [`docs/02-app.md`](docs/02-app.md). Starts only when the user says the landing page is done, with its own grill-me rounds first |
 
 ### Waiting on the user (don't do these for them)
@@ -34,7 +34,7 @@
 - **Generic, with specialtyCoffeeMarket as the default shop.** All shop details live **only** in `next-app/config/shop.ts`. Never hard-code a shop's name, links or logo anywhere else; use `{shopName}` in texts and `fill()`.
 - **One palette for every shop** (specialtyCoffeeMarket's). The shop config has no color field.
 - **No fake proof:** no invented testimonials, partner logos, numbers or reviews. Example coffees in mockups are illustrations, labelled as such.
-- **Honest status:** "Early access", no App Store / Google Play, no prices for shops ("founding partners").
+- **Honest status:** "Private beta" (grill round 7; the app runs for a small group), only what the app really does today (upcoming things marked "Coming soon"), no App Store / Google Play, no prices for shops ("founding partners").
 - **Two audiences:** buyer copy speaks to the person ("your coffees"); coffee-shop copy talks about the business ("your customers", "your catalog"). The main conversion is coffee-shop contact.
 - **Privacy:** GDPR consent checkbox on both forms; no cookies except `cobby-lang` (language preference); Vercel Web Analytics (cookie-free), so no cookie banner.
 
@@ -54,7 +54,7 @@
 | `lib/recipes.ts` | Calculator recipes (approved in grill round 4) |
 | `lib/utils.ts` | **`cn()` configured with the custom text sizes.** Always import `cn` from `@/lib/utils`, never from `"cn"`, or `text-body` & co. will wipe out text colors |
 | `components/section.tsx` | `Section` (paper / cream / plum band + scroll reveal), `SectionTitle`, `IconTile`, `RatingDots`, `ArrowDot`, `Sticker` |
-| `components/*.tsx` | One file per section (`hero`, `how-it-works`, `shelf`, `brew-section` + `ratio-calculator`, `similar`, `meet-cobby`, `for-shops`, `faq`, `contact` + `contact-forms` + `app-access` (QR)), plus `site-header`, `site-footer`, `language-switch`, `logo`, `phone-mockup` (the app's share card, dark), `cobby` (the mascot) |
+| `components/*.tsx` | One file per section (`hero`, `how-it-works`, `shelf`, `brew-section` + `tune-demo`, `similar`, `meet-cobby`, `app-highlights`, `for-shops`, `faq`, `contact` + `contact-forms` + `app-access` (QR)), plus `site-header`, `site-footer`, `language-switch`, `logo`, `phone-mockup` (the app's share card, dark), `cobby` (the mascot) |
 | `lib/flavors.ts`, `lib/app-link.ts` | Flavor families + sticker colors; the app link with UTM tags (`appUrl` lives in `config/shop.ts`) |
 | `app/globals.css` | Theme tokens (palette → shadcn tokens), type scale utilities (`text-caption` … `text-display`), animation classes |
 | `public/blobs.webp`, `public/coffee-lettering.webp` | specialtyCoffeeMarket images: hero background and the "coffee" lettering on the plum band |
