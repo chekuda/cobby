@@ -88,6 +88,12 @@ Context: the app (`~/Desktop/me/code/cobby-app`, live at `https://app.specialtyc
 | Q45 | **"Cobby reads the label" (2026-11-03, after the build).** The app doesn't read labels yet (AI label reading moved to the app's v2) | **Owner: take it out of the landing for now** and keep it as a to-do. Gone: step 2 of "How it works" (now three steps; step 1 says to photograph the bag and find the coffee in the shop or type it in), "Cobby reads the bag" in the hero subtitle and the page description, and the FAQ "Which bags work?". The headline "Snap your bag. Brew it better." stays (the app does save a photo of the bag) |
 | Q44 | **The app is a private friends test.** Public QR now ("try it"), QR only when the app opens, or QR now with an honest "private beta, ask for access" text? | **Owner: QR now with an honest text** ("private beta, ask for access") |
 
+## Hero headline (2026-11-08)
+
+| # | Question | Decision |
+|---|---|---|
+| Q57 | **Sharing in the hero.** The owner wants the headline to mention sharing | **Owner: "Guarda tu café. Prepáralo mejor. Compártelo."** English follows, since every text exists in both: "Snap your bag. Brew it better. Share it." (also in the page title) |
+
 ## Round 7: the landing catches up with the app (2026-11-06), answered and built
 
 Context: by 2026-11-06 the app (`cobby-app`, feature list in its `docs/05-features.md`) has recipes tuned to you, recommendations from the shop's catalog, prices with "Buy at …", stickers, a monthly challenge, missions with a coupon, invite a friend, share cards, "Your month in coffee" and push notices. The landing showed none of that, and it said three things that are no longer true: coffees saved "on your phone, without an account", a guided "timer", and recipes for 4 methods (the app has 7). Open questions, no recommended answer.

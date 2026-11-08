@@ -6,7 +6,7 @@ import type { Dictionary } from "./es"
 
 const en: Dictionary = {
   meta: {
-    title: "Cobby · Snap your bag. Brew it better.",
+    title: "Cobby · Snap your bag. Brew it better. Share it.",
     description:
       "Cobby keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop.",
   },
@@ -24,7 +24,7 @@ const en: Dictionary = {
   },
   hero: {
     tag: "Private beta",
-    title: "Snap your bag. Brew it better.",
+    title: "Snap your bag. Brew it better. Share it.",
     subtitle:
       "Cobby keeps your coffees and guides every brew. Then finds similar coffees at your favorite shop.",
     primary: "Bring Cobby to your shop",

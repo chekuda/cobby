@@ -6,7 +6,7 @@ import type { Family } from "@/lib/flavors"
 
 const es = {
   meta: {
-    title: "Cobby · Guarda tu café. Prepáralo mejor.",
+    title: "Cobby · Guarda tu café. Prepáralo mejor. Compártelo.",
     description:
       "Cobby guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita.",
   },
@@ -24,7 +24,7 @@ const es = {
   },
   hero: {
     tag: "Beta privada",
-    title: "Guarda tu café. Prepáralo mejor.",
+    title: "Guarda tu café. Prepáralo mejor. Compártelo.",
     subtitle:
       "Cobby guarda tus cafés y te guía al prepararlos. Y te descubre cafés parecidos en tu tienda favorita.",
     primary: "Lleva Cobby a tu tienda",

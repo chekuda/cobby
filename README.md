@@ -11,7 +11,7 @@ Cobby helps coffee lovers **keep track of the coffees they buy, brew them better
 
 ### What the landing page has
 
-- **Hero:** "Guarda tu café. Prepáralo mejor." ("Snap your bag. Brew it better." in English) on a warm blob background, with a phone built in code showing the app's tasting share card in the app's dark look.
+- **Hero:** "Guarda tu café. Prepáralo mejor. Compártelo." ("Snap your bag. Brew it better. Share it." in English) on a warm blob background, with a phone built in code showing the app's tasting share card in the app's dark look.
 - **How it works** (three steps; "Cobby reads the label" comes back when the app does it), **your coffee shelf**, and **Brew better** (seven methods in the app) with a working **"Tune it to my taste" demo**: change grams, water, temperature or grinder clicks and see "your version". The guided timer is marked "Coming soon".
 - **Everything inside:** cards with what the beta already does (recipes your way, coffees for you, prices and buying, challenges and missions, stickers, invite a friend, story cards, notices).
 - **Similar coffees**, linking to the shop (specialtyCoffeeMarket by default), with the flavor families as stickers.
